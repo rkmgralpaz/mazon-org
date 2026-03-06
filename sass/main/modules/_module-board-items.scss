@@ -1,0 +1,89 @@
+.module-board-items{
+    position: relative;
+    background: $color-light-gray;
+    font-size: 28px;
+    line-height: 40px;
+    color: white;
+    &.archive{
+        min-height: 100vh;
+        min-height: calc(100vh - 100px);
+    }
+    &.add-top-space{
+        padding-top: 70px;
+    }
+    .outer{
+        .inner{
+            //
+            @media only screen and (max-width: $standard-width) {
+                //
+            }
+        }
+    }
+    .items{
+        padding-top: 40px;
+        padding-bottom: 70px;
+        $module-two-columns-grid-gap: 30px;
+        $module-two-columns-grid-offset-3-col: calc($module-two-columns-grid-gap / 3 * 2);
+        $module-two-columns-template-3-col: calc(33.333% - #{$module-two-columns-grid-offset-3-col});
+        $module-two-columns-grid-offset-2-col: calc($module-two-columns-grid-gap / 2);
+        $module-two-columns-template-2-col: calc(50% - #{$module-two-columns-grid-offset-2-col});
+        display: grid;
+        grid-template-columns: $module-two-columns-template-2-col $module-two-columns-template-2-col;
+        grid-gap: $module-two-columns-grid-gap;
+        @media only screen and (max-width: $breakpoint-ipad-landscape - 1px) {
+            grid-auto-flow: dense;
+            grid-template-columns: auto;
+            //grid-gap: 0px;
+        }
+        &.remove-top-space{
+            padding-top: 0px;
+        }
+        .post-item{
+            font-size: 20px;
+            line-height: 32px;
+            color: $color-dark-blue;
+            h3{
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            a{
+                color: $color-dark-blue;
+                border-bottom: solid 1px $color-dark-blue;
+                transition: color 0.3s, border 0.3s;
+                &:hover{
+                    color: $color-light-blue;
+                    border-color: $color-light-blue;
+                }
+            }
+            @media only screen and (max-width: $breakpoint-ipad-landscape - 1px) {
+                //
+            }
+        }
+    }
+    .colorize{
+        color: $color-orange;
+    }
+    .label{
+        font-size: 28px;
+        line-height: 28px;
+        font-weight: 700;
+        color: $color-light-blue;
+    }
+}
+body.large-fonts{
+    .module-board-items{
+        .items{
+            .post-item{
+                font-size: 25px;
+                line-height: 40px;
+            }
+        }
+    }
+    .label{
+        font-size: 35px;
+        line-height: 35px;
+    }
+}
+
+
+

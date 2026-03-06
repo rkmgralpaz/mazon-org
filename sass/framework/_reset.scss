@@ -1,0 +1,115 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+	// outline: 			none;
+}
+
+ul,li,dl,dt,dd{
+    padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+	padding: 0px;
+	margin: 0px;
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1em;
+}
+
+p{
+	margin: 0px;
+}
+
+a{
+	text-decoration: none;
+}
+
+img{
+	border: none;
+}
+
+hr{
+	border: none;
+	height: 0px;
+	line-height: 0px;
+}
+
+input,
+button {
+	background: none;
+	border: 0;
+	color: inherit;
+	font: inherit;
+	line-height: normal;
+	overflow: visible;
+	padding: 0;
+	//-webkit-appearance: none;
+	-webkit-border-radius:0px;
+	border-radius: 0;
+    &[type="text"],
+    &[type="search"],
+    &[type="email"],
+    &[type="password"],
+    &[type="date"],
+    &[type="datetime-local"],
+    &[type="month"],
+    &[type="reset"],
+    &[type="search"],
+    &[type="number"],
+    &[type="tel"],
+    &[type="time"],
+    &[type="url"],
+    &[type="week"]{
+        -webkit-appearance: none; /* WebKit */
+        -moz-appearance: none; /* Mozilla */
+        -o-appearance: none; /* Opera */
+        -ms-appearance: none; /* Internet Explorer */
+        appearance: none; /* CSS3 */
+    }
+}
+input{
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	-o-user-select: text;
+	user-select: text;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    background: transparent;
+    -webkit-text-background-color: transparent;
+    -webkit-text-fill-color: black;
+    -webkit-background-clip: text;
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: #827f7f;
+	opacity: 1;
+}
+::-moz-placeholder { /* Firefox 19+ */
+	color: #827f7f;
+	opacity: 1;
+}
+:-ms-input-placeholder { /* IE 10+ */
+	color: #827f7f;
+	opacity: 1;
+}
+:-moz-placeholder { /* Firefox 18- */
+	color: #827f7f;
+	opacity: 1;
+}

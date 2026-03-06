@@ -1,0 +1,17 @@
+span.heading-format{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+span.colorize{
+    color: #BE6013;
+}
+span.highlight{
+    color: #00A3C1;
+    font-size: 1.1em;
+}
+span.arrow-format{
+    font-weight: 700;
+}
+span.arrow-format:before{
+    content: '→';
+}

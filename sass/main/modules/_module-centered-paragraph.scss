@@ -1,0 +1,43 @@
+.module-centered-paragraph{
+    position: relative;
+    background: $color-burgundy;
+    font-size: 28px;
+    line-height: 40px;
+    color: white;
+    a{
+        display: inline-block;
+        border-bottom: solid 1px white;
+        color: white;
+        font-weight: 700;
+        transition: color 0.3s, border 0.3s;
+        &:hover{
+            color: $color-orange;
+            border-color: $color-orange;
+        }
+    }
+    .outer{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        .inner{
+            margin: 0 auto;
+            max-width: 1100px;
+            @media only screen and (max-width: $standard-width) {
+                max-width: 970px;
+            }
+        }
+    }
+    .colorize{
+        color: $color-orange;
+    }
+}
+body.large-fonts{
+    .module-centered-paragraph{
+        font-size: 35px;
+        line-height: 50px;
+        .outer{
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+    }
+}
+

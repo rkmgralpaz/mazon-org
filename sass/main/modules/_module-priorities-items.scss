@@ -1,0 +1,81 @@
+
+.module-priorities-items{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &.archive{
+        min-height: calc(100vh - 300px);
+    }
+    .items{
+        //https://css-tricks.com/snippets/css/complete-guide-grid/
+        $module-priorities-grid-gap: 40px;
+        $module-priorities-grid-offset-3-col: calc($module-priorities-grid-gap / 3 * 2);
+        $module-priorities-template-3-col: calc(33.333% - #{$module-priorities-grid-offset-3-col});
+        $module-priorities-grid-offset-2-col: calc($module-priorities-grid-gap / 2);
+        $module-priorities-template-2-col: calc(50% - #{$module-priorities-grid-offset-2-col});
+        display: grid;
+        grid-template-columns: $module-priorities-template-3-col $module-priorities-template-3-col $module-priorities-template-3-col;
+        grid-gap: $module-priorities-grid-gap;
+        @media only screen and (max-width: 1200px) {
+            grid-template-columns: $module-priorities-template-2-col $module-priorities-template-2-col;
+        }
+        @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+            grid-auto-flow: dense;
+            grid-template-columns: auto;
+        }
+        .post-item{
+            .thumbnail{
+                background: $color-light-gray;
+                height: 258px;
+                width: 100%;
+                margin-bottom: 40px;
+                @media only screen and (max-width: $standard-width){
+                    height: 208px;
+                }
+                //aspect ratio 52.8%
+                .image{
+                    width: 100%;
+                    height: 100%;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    filter: grayscale(1);
+                    transition: all 0.3s;
+                }
+            }
+            .title{
+                font-size: 24px;
+                line-height: 32px;
+                font-weight: 700;
+                color: $color-light-blue;
+            }
+            .subtitle{
+                font-size: 20px;
+                line-height: 32px;
+                color: $color-dark-blue;
+            }
+            &:hover{
+                .thumbnail{
+                    .image{
+                        filter: grayscale(0);
+                    }
+                }
+            }
+        }
+    }
+}
+body.large-fonts{
+    .module-priorities-items{
+        .items{
+            .post-item{
+                .title{
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+                .subtitle{
+                    font-size: 25px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}

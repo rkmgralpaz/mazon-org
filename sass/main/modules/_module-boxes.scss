@@ -1,0 +1,467 @@
+.module-boxes{
+    position: relative;
+    background-color: white;
+    .outer{
+        padding-top: 40px;
+        padding-bottom: 70px;
+        .inner{
+            @media only screen and (max-width: $standard-width) {
+                
+            }
+        }
+    }
+    .colorize{
+        color: $color-orange;
+    }
+    .label{
+        font-size: 23px;
+        line-height: 23px;
+        font-weight: 600;
+        color: $color-dark-blue;
+        margin-bottom: 45px;
+    }
+    .image-wrapper{
+        width: 100%;
+        min-height: 255px;
+        background-color: rgba(black,0.1);
+        position: relative;
+        padding-top: 40%;
+        .image{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            opacity: 0;
+            transition: opacity 0.5s;
+            &.bw-filter{
+                filter: grayscale(1);
+            }
+            &.loaded{
+                opacity: 1;
+            }
+        }
+    }
+    .title{
+        font-size: 28px;
+        line-height: 38px;
+        color: $color-light-blue;
+        //font-weight: 700;
+        font-weight: 400;
+    }
+    .text{
+        padding-top: 20px;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 32px;
+        color: $color-dark-blue;
+        b,
+        strong{
+            font-weight: 700;
+        }
+        a{
+            //display: inline-block;
+            display: inline;
+            font-weight: 700;
+            color: $color-dark-blue;
+            border-bottom: solid 1px $color-dark-blue;
+            transition: color 0.3s, border 0.3s;
+            &:hover{
+                color: $color-light-blue;
+                border-color: $color-light-blue;
+            }
+        }
+        ul{
+            padding-left: 1.1em;
+            margin-bottom: 30px;
+            li{
+                list-style: disc;
+            }
+        }
+        ol{
+            padding-left: 1.1em;
+            margin-bottom: 30px;
+            li{
+                list-style: decimal;
+            }
+        }
+        p{
+            margin-bottom: 28px;
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .bottom-links{
+        margin-top: 40px;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 700;
+        svg{
+            transform: translateY(1px);
+            height: 20px;
+            width: auto;
+            margin-right: 5px;
+            *{
+                transition: fill 0.3s;
+                fill: white;
+            }
+            &.icon-world{
+                transform: translateY(2px);
+            }
+            &.icon-link{
+                transform: translateY(1px);
+            }
+            &.icon-document{
+                transform: translateY(1px);
+            }
+        }
+        a{
+            color: white !important;
+            transition: color 0.3s;
+            display: inline-block;
+            margin-bottom: 20px;
+            border: none !important;
+            &:hover{
+                color: $color-orange !important;
+                svg{
+                    *{
+                        fill: $color-orange;
+                    }
+                }
+            }
+        }
+    }
+    .boxes{
+        //https://css-tricks.com/snippets/css/complete-guide-grid/
+        $module-boxes-grid-gap: 50px;
+        $module-boxes-grid-offset-3-col: calc($module-boxes-grid-gap / 3 * 2);
+        $module-boxes-template-3-col: calc(33.333% - #{$module-boxes-grid-offset-3-col});
+        $module-boxes-grid-offset-2-col: calc($module-boxes-grid-gap / 2);
+        $module-boxes-template-2-col: calc(50% - #{$module-boxes-grid-offset-2-col});
+        display: grid;
+        grid-template-columns: $module-boxes-template-2-col $module-boxes-template-2-col;
+        grid-gap: $module-boxes-grid-gap;
+        @media only screen and (max-width: $breakpoint-ipad-landscape - 1px) {
+            grid-auto-flow: dense;
+            grid-template-columns: auto;
+        }
+        @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+            //grid-gap: 20px;
+        }
+        @media only screen and (max-width: $breakpoint-iphone-portrait - 1px) {
+            width: calc(100% + 40px);
+            margin-left: -20px;
+        }
+        .box{
+            //min-height: 550px;
+            //min-height: 450px;
+            background: $color-light-gray;
+            @media only screen and (max-width: $standard-width) {
+                //min-height: 450px;
+            }
+            .inner-box{
+                //padding: 50px 40px;
+                padding: 40px;
+                padding-top: 30px;
+                @media only screen and (max-width: $breakpoint-iphone-plus-portrait) {
+                    //padding: 35px 20px;
+                    padding: 20px;
+                    padding-top: 25px;
+                    padding-bottom: 40px;
+                }
+            }
+            .read-more{
+                color: white;
+                font-weight: 700;
+                border-bottom: solid 1px white;
+                transition: color 0.3s, border 0.3s;
+                display: inline-block;
+            }
+            a{
+                color: $color-blue;
+                border-bottom: solid 1px $color-blue;
+                &:hover{
+                    color: $color-light-blue;
+                    border-color: $color-light-blue;
+                }
+            }
+            .link-color{
+                color: $color-blue;
+                border-bottom: solid 1px $color-blue;
+                font-weight: 700;
+            }
+            &.color-palette-light-gray{
+                .read-more{
+                    color: $color-light-blue;
+                    border-color: $color-light-blue;
+                }
+                &:hover{
+                    .read-more{
+                        color: $color-blue;
+                        border-color: $color-blue;
+                    }
+                }
+                .bottom-links{
+                    .link-color{
+                        color: $color-light-blue !important;
+                        border: none !important;
+                    }
+                    svg{
+                        *{
+                            fill: $color-light-blue;
+                        }
+                    }
+                    a{
+                        color: $color-light-blue !important;
+                        &:hover{
+                            color: $color-blue !important;
+                            svg{
+                                *{
+                                    fill: $color-blue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.color-palette-orange{
+                background: $color-orange;
+                .title{
+                    color: white;
+                }
+                .text{
+                    color: $color-burgundy;
+                    a{
+                        color: white;
+                        border-bottom: solid 1px white;
+                        &:hover{
+                            color: $color-burgundy;
+                            border-color: $color-burgundy;
+                        }
+                    }
+                    .link-color{
+                        color: white;
+                        border-bottom: solid 1px white;
+                    }
+                }
+                &:hover{
+                    .read-more{
+                        color: $color-burgundy;
+                        border-color: $color-burgundy;
+                    }
+                }
+                .bottom-links{
+                    .link-color{
+                        color: white !important;
+                        border: none !important;
+                    }
+                    svg{
+                        *{
+                            fill: white;
+                        }
+                    }
+                    a{
+                        color: white !important;
+                        &:hover{
+                            color: $color-burgundy !important;
+                            svg{
+                                *{
+                                    fill: $color-burgundy;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.color-palette-light-blue{
+                background: $color-light-blue;
+                .title{
+                    color: white;
+                }
+                .text{
+                    color: $color-dark-blue;
+                    a{
+                        color: white;
+                        border-bottom: solid 1px white;
+                        &:hover{
+                            color: $color-dark-blue;
+                            border-color: $color-dark-blue;
+                        }
+                    }
+                    .link-color{
+                        color: white;
+                        border-bottom: solid 1px white;
+                    }
+                }
+                &:hover{
+                    .read-more{
+                        color: $color-dark-blue;
+                        border-color: $color-dark-blue;
+                    }
+                }
+                .bottom-links{
+                    .link-color{
+                        color: white !important;
+                        border: none !important;
+                    }
+                    svg{
+                        *{
+                            fill: white;
+                        }
+                    }
+                    a{
+                        color: white !important;
+                        &:hover{
+                            color: $color-dark-blue !important;
+                            svg{
+                                *{
+                                    fill: $color-dark-blue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.color-palette-blue{
+                background: $color-blue;
+                .title{
+                    color: white;
+                }
+                .text{
+                    color: $color-light-blue;
+                    a{
+                        color: white;
+                        border-bottom: solid 1px white;
+                        &:hover{
+                            color: $color-light-blue;
+                            border-color: $color-light-blue;
+                        }
+                    }
+                    .link-color{
+                        color: white;
+                        border-bottom: solid 1px white;
+                    }
+                }
+                &:hover{
+                    .read-more{
+                        color: $color-light-blue;
+                        border-color: $color-light-blue;
+                    }
+                }
+                .bottom-links{
+                    .link-color{
+                        color: white !important;
+                        border: none !important;
+                    }
+                    svg{
+                        *{
+                            fill: white;
+                        }
+                    }
+                    a{
+                        color: white !important;
+                        &:hover{
+                            color: $color-light-blue !important;
+                            svg{
+                                *{
+                                    fill: $color-light-blue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.color-palette-burgundy{
+                background: $color-burgundy;
+                .title{
+                    color: $color-orange;
+                }
+                .text{
+                    color: white;
+                    a{
+                        color: $color-orange;
+                        border-bottom: solid 1px $color-orange;
+                        &:hover{
+                            color: white;
+                            border-color: white;
+                        }
+                    }
+                    .link-color{
+                        color: $color-orange;
+                        border-bottom: solid 1px $color-orange;
+                        svg{
+                            *{
+                                fill: $color-orange;
+                            }
+                        }
+                    }
+                }
+                .read-more{
+                    color: $color-orange;
+                    border-color: $color-orange;
+                }
+                &:hover{
+                    .read-more{
+                        color: white;
+                        border-color: white;
+                    }
+                }
+                .bottom-links{
+                    .link-color{
+                        color: $color-orange !important;
+                        border: none !important;
+                    }
+                    svg{
+                        *{
+                            fill: $color-orange;
+                        }
+                    }
+                    a{
+                        color: $color-orange !important;
+                        &:hover{
+                            color: white !important;
+                            svg{
+                                *{
+                                    fill: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.one-link{
+                position: relative;
+                a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    border: none !important;
+                }
+            }
+        }
+    }
+}
+body.large-fonts{
+    .module-boxes{
+        .outer{
+            //padding-top: 100px;
+            //padding-bottom: 100px;
+        }
+        .label{
+            font-size: 30px;
+            line-height: 30px;
+        }
+        .title{
+            font-size: 35px;
+            line-height: 48px;
+        }
+        .text{
+            font-size: 25px;
+            line-height: 40px;
+        }
+    }
+}

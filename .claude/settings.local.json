@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(ln:*)",
+      "Bash(sips:*)",
+      "Bash(chmod:*)",
+      "WebFetch(domain:developers.kommo.com)",
+      "WebFetch(domain:chatapp.online)",
+      "WebFetch(domain:help.chatapp.online)",
+      "WebFetch(domain:www.kommo.com)",
+      "Bash(node -e:*)",
+      "Bash(curl:*)",
+      "Bash(python3 -m json.tool:*)",
+      "WebFetch(domain:community.n8n.io)",
+      "Bash(python3:*)",
+      "Bash(__NEW_LINE_563ec5a2b6c14147__ curl -s \"https://graph.facebook.com/v22.0/105686914094535/owned_whatsapp_business_accounts?fields=id,name&access_token=EAATGBBOZAFjsBQ5eRXNaTLjoCQFtBtijfOYKGVVyZBizeZC16L6KmXTLZAsu5hYZBmJRDzPwAUQ484ZAz1h0ZCShxOkpnQzn59XuZAfBvoRnvVhpdmTp9VVx9ZCeyoS61RX9vRPGcRcpj7NhLK0E9XnaQS5nUMLGHxJTNS6tYFnjSmKJXV4soHIAvphN2DdlqwgZDZD\")",
+      "WebFetch(domain:wazzup24.com)",
+      "WebFetch(domain:docs.radist.online)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:docs.n8n.io)",
+      "WebFetch(domain:blog.nocodecreative.io)",
+      "WebFetch(domain:graph.facebook.com)",
+      "WebFetch(domain:developers.facebook.com)",
+      "WebFetch(domain:botsailor.com)",
+      "WebFetch(domain:docs.ycloud.com)",
+      "WebFetch(domain:www.postman.com)",
+      "WebFetch(domain:www.skool.com)",
+      "WebFetch(domain:n8n.io)",
+      "Bash(cat:*)",
+      "WebFetch(domain:www.figma.com)"
+    ]
+  }
+}

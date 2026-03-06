@@ -1,0 +1,172 @@
+.module-form{
+    position: relative;
+    background: $color-light-gray;
+    a{
+        display: inline-block;
+        border-bottom: solid 1px white;
+        color: white;
+        font-weight: 700;
+        transition: color 0.3s, border 0.3s;
+        &:hover{
+            color: $color-orange;
+            border-color: $color-orange;
+        }
+    }
+    .outer{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        &.bg-white{
+            background-color: white;
+        }
+        &.remove-top-space{
+            padding-top: 0px;
+        }
+        &.remove-side-space{
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }
+        .inner{
+            //https://css-tricks.com/snippets/css/complete-guide-grid/
+            $module-form-grid-gap: 40px;
+            $module-form-grid-offset: calc($module-form-grid-gap / 2);
+            //$module-form-template-col-1: calc(33.333% - #{$module-form-grid-offset});
+            //$module-form-template-col-2: calc(66.66% - #{$module-form-grid-offset});
+            $module-form-template-col-1: calc(31% - #{$module-form-grid-offset});
+            $module-form-template-col-2: calc(69% - #{$module-form-grid-offset});
+            
+            display: grid;
+            grid-template-columns: $module-form-template-col-1 $module-form-template-col-2;
+            grid-gap: $module-form-grid-gap;
+            @media only screen and (max-width: 1200px) {
+                grid-auto-flow: dense !important;
+                grid-template-columns: auto !important;
+                grid-gap: 0px;
+            }
+            &.hide-text{
+                grid-auto-flow: dense !important;
+                grid-template-columns: auto !important;
+                grid-gap: 0px;
+            }
+        }
+    }
+    .colorize{
+        color: $color-orange;
+    }
+    .text{
+        color: $color-dark-blue;
+        font-size: 20px;
+        line-height: 32px;
+        max-width: 1150px;
+        a{
+            color: $color-dark-blue;
+            border-bottom: solid 1px $color-dark-blue;
+            font-weight: 700;
+            transition: color 0.3s, border-color 0.3s;
+            &:hover{
+                color: $color-light-blue;
+                border-color: $color-light-blue;
+            }
+        }
+        h3,
+        p{
+            margin-bottom: 32px;
+        }
+        h3,
+        .arrow-format{
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 38px;
+            color: $color-light-blue;
+            display: inline-block;
+            transition: color 0.3s;
+            a{
+                color: $color-light-blue;
+                border: none;
+                transition: color 0.3s;
+                &:hover{
+                    color: $color-dark-blue;
+                }
+            }
+        }
+        a{
+            &:hover{
+                .arrow-format{
+                    color: $color-dark-blue;
+                }
+            }
+        }
+        h3{
+            display: block;
+        }
+        .arrow-format{
+            padding-left: 30px;
+            background-image: url(assets/icon-items.svg);
+            background-repeat: no-repeat;
+            background-position: 0px 17px;
+        }
+        ul{
+            padding-left: 1.1em;
+            margin-bottom: 30px;
+            li{
+                list-style: disc;
+            }
+        }
+        ol{
+            padding-left: 1.1em;
+            margin-bottom: 30px;
+            li{
+                list-style: decimal;
+            }
+        }
+        .title,
+        h3,
+        .heading-format{
+            font-size: 28px;
+            //line-height: 28px;
+            font-weight: 700;
+        }
+        .title,
+        h3{
+            display: block;
+        }
+        .title{
+            color: $color-light-blue;
+        }
+        .heading-format{
+            a{
+                border: none;
+                color: $color-light-blue;
+                &:hover{
+                    color: $color-dark-blue;
+                }
+            }
+        }
+    }
+}
+body.large-fonts{
+    .module-form{
+        .text{
+            font-size: 25px;
+            line-height: 40px;
+            h3,
+            p{
+                margin-bottom: 40px;
+            }
+            h3,
+            .arrow-format{
+                font-size: 35px;
+                line-height: 47px;
+            }
+            .arrow-format{
+                background-position: 0px 15px;
+            }
+            .title,
+            h3,
+            .heading-format{
+                font-size: 35px;
+                //line-height: 35px;
+            }
+        }
+    }
+}
+

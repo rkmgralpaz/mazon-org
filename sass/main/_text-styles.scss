@@ -1,0 +1,151 @@
+//-------------------//
+//--- TEXT STYLES ---//
+//-------------------//
+body{
+    font-family: 'HKGroteskPro-Medium', sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+    background: white;
+}
+//--- About modules ---//
+.txt-module-top-text{
+    font-family: "freight-display-pro", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.12em;
+    @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+        font-size: 20px;
+    }
+}
+.txt-module-title{
+    font-family: 'HKGroteskPro-Bold';
+    font-size: 95px;
+    line-height: 100px;
+    letter-spacing: -0.015em;
+    @media only screen and (max-width: $breakpoint-ipad-landscape) {
+        font-size: 75px;
+        line-height: 80px;
+    }
+    @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+        font-size: 50px;
+        line-height: 50px;
+    }
+}
+.txt-module-text{
+    font-size: 27px;
+    line-height: 44px;
+    font-family: 'HKGroteskPro-Light';
+    @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+        font-family: 'HKGroteskPro-Book';
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
+.txt-module-text-team{
+    font-size: 16px;
+    line-height: 44px;
+    font-family: 'HKGroteskPro-Medium';
+    @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+        //font-size: 18px;
+        font-size: 22px;
+        line-height: 38px;
+    }
+}
+.txt-block-title{
+    font-family: "freight-display-pro", sans-serif;
+    font-size: 65px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    line-height: 65px;
+    @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+        font-size: 50px;
+        line-height: 50px;
+    }
+}
+.txt-block-blurb{
+    font-size: 26px;
+    line-height: 32px;
+    @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+        font-family: 'HKGroteskPro-Medium';
+        font-size: 27px;
+        //line-height: 34px;
+    }
+}
+.txt-block-copy{
+    font-family: 'HKGroteskPro-Book';
+    font-size: 16px;
+    line-height: 28px;
+    @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+        //font-size: 18px;
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
+.txt-name-of-team-list{
+    font-family: "freight-display-pro", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+}
+.txt-collection-info{
+    font-size: 16px;
+    font-family: "freight-display-pro", sans-serif;
+    font-weight: 500;
+    span{
+        font-family: 'HKGroteskPro-Medium';
+        &.title{
+            font-style: italic;
+            padding-right: 4px;//fix quotes right space
+        }
+    }
+}
+.txt-color-dark-blue{
+    color: $color-dark-blue;
+}
+.txt-color-light-blue{
+    color: $color-light-blue;
+}
+.txt-color-orange{
+    color: $color-orange;
+}
+//
+//--- Editors / Mograph / Projects ---//
+//
+.txt-editors-col-1,
+.txt-mograph-col-1{
+    font-size: 18px;
+    font-family: "freight-display-pro", sans-serif;
+    letter-spacing: 0.12em;
+    @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+        font-size: 20px;
+    }
+}
+.txt-editors-list,
+.txt-project-author{
+    font-family: 'HKGroteskPro-Bold';
+    font-size: 40px;
+    line-height: 40px;
+    @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+        font-size: 30px;
+        line-height: 30px;
+    }
+}
+.txt-editors-country{
+    font-family: "freight-display-pro", sans-serif;
+    //font-family: 'HKGroteskPro-Medium';                                    
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+        font-size: 18px;
+    }
+}
+.txt-editors-bottom-text{
+    font-family: "freight-display-pro", sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+}
+.txt-projects-list{
+    font-family: 'HKGroteskPro-Book'; 
+    font-size: 22px;
+    line-height: 1.15em;
+}

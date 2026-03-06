@@ -1,0 +1,577 @@
+/* ============================================================
+   POSTCARDS WALL – styles.css
+   ============================================================ */
+
+/* ---------- Reset ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #44B1DD;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Intro screen removed — lives in WordPress (page-postcards-intro.php) */
+
+/* ============================================================
+   WALL
+   ============================================================ */
+#wall-container {
+  position: fixed;
+  inset: 0;
+  padding-top: var(--header-height, 0px);
+  overflow: hidden;
+  cursor: grab;
+  touch-action: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#wall-container.is-visible {
+  opacity: 1;
+}
+
+#wall-container.is-dragging {
+  cursor: grabbing;
+}
+
+#wall-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
+/* ============================================================
+   POSTCARD ITEMS (with flip structure)
+   ============================================================ */
+.postcard-item {
+  position: absolute;
+  /* box-shadow: 0 2px 12px rgba(0,0,0,0.12); */
+  cursor: pointer;
+  /* Rotation applied via CSS var so hover can override it */
+  transform: rotate(var(--rotation, 0deg));
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.2s,
+              opacity 0.4s ease;
+  /* No border-radius / overflow:hidden here — those caused GPU shimmer
+   * during canvas zoom. border-radius is applied directly to images. */
+}
+
+.postcard-item:hover {
+  /* --hover-rotation is pre-computed per card in JS (different from --rotation) */
+  transform: rotate(var(--hover-rotation, var(--rotation, 0deg))) scale(1.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+}
+
+.postcard-item:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+  transform: rotate(var(--hover-rotation, var(--rotation, 0deg))) scale(1.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+}
+
+/* Flipper container */
+.postcard-flipper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  /* perspective() as a function keeps 3D context self-contained */
+  transform: perspective(800px) rotateY(0deg);
+}
+
+/* Faces */
+.postcard-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  /* No border-radius / overflow:hidden — applied on img instead */
+}
+
+.postcard-face--front {
+  transform: rotateY(0deg);
+}
+
+.postcard-face--back {
+  transform: rotateY(180deg);
+}
+
+/* Show back by default (flipper rotated 180) */
+.postcard-item[data-face="back"] .postcard-flipper {
+  transform: perspective(800px) rotateY(180deg);
+}
+
+.postcard-item[data-face="front"] .postcard-flipper {
+  transform: perspective(800px) rotateY(0deg);
+}
+
+/* Images */
+.postcard-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  /* LQIP blur-up transitions */
+  filter: blur(0);
+  transform: scale(1);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.postcard-item img.is-lqip {
+  filter: blur(8px);
+  transform: scale(1.05);
+}
+
+/* ============================================================
+   ZOOM CONTROLS — wall (visible on wall, covered by slider modal)
+   ============================================================ */
+.zoom-controls {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 50;            /* below slider-modal (200) → auto-hidden when slider opens */
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.zoom-btn {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 88px;
+  background: #033052;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.zoom-btn:hover { background: #04436e; }
+
+.zoom-btn svg { flex-shrink: 0; }
+
+/* ============================================================
+   SLIDER NAV (Prev / Next) — bottom-left, above slider modal
+   Same visual language as zoom buttons. Only visible in slider.
+   ============================================================ */
+#slider-nav {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 210;
+  display: none;           /* hidden while wall is showing */
+  flex-direction: row;
+  gap: 8px;
+}
+
+#slider-modal.is-open ~ #slider-nav,
+#slider-nav.is-visible {
+  display: flex;
+}
+
+#slider-prev,
+#slider-next {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 88px;
+  background: #033052;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#slider-prev:hover,
+#slider-next:hover {
+  background: #04436e;
+}
+
+#slider-prev img,
+#slider-next img {
+  display: block;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   SLIDER MODAL
+   ============================================================ */
+#slider-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: #F0F0EF;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: background 320ms ease;
+  outline: none;
+}
+
+#slider-modal.is-open {
+  display: flex;
+}
+
+/* Measuring pass: visible for layout but invisible to user */
+#slider-modal.is-measuring {
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#slider-modal.is-animating {
+  background: #F0F0EF;
+}
+
+/* ============================================================
+   SLIDER TRACK (3-card layout)
+   ============================================================ */
+#slider-track {
+  position: relative;
+  width: 100vw;
+  height: 100vh; /* cambie esto porque se veia cortada la carta al hacer flip */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+.slider-card {
+  position: absolute;
+  width: 52.45vw;  /* 793px @ 1512px viewport */
+  max-width: 900px;
+  /* Position transition only (translate + scale + opacity) — used during hero expand.
+     Roulette mode overrides with inline style.transition = 'none' for rAF positioning. */
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.5s ease;
+  will-change: transform, opacity;
+  perspective: 1000px;
+  pointer-events: none;
+}
+
+/* Center + adjacent cards receive pointer events */
+.slider-card.is-center {
+  pointer-events: auto;
+}
+
+.slider-card.is-adjacent {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* ── Hover effect on adjacent (prev/next) cards ── */
+.slider-card.is-adjacent .slider-face img {
+  transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+              filter 300ms ease,
+              box-shadow 300ms ease;
+}
+
+.slider-card.is-adjacent:hover .slider-face img {
+  transform: scale(1.06);
+  filter: brightness(1.08);
+}
+
+.slider-card.is-adjacent:hover {
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.25));
+}
+
+/* Disable transitions for instant state changes */
+.slider-card.no-transition,
+.slider-card.no-transition .slider-flipper {
+  transition: none !important;
+}
+
+/* Roulette active: all motion via rAF, no CSS transitions on cards */
+#slider-track.roulette-active .slider-card {
+  transition: none !important;
+}
+
+/* ── Position states ── */
+/* Exact values: center=793px, lateral=472px, gap=158px @ 1512px */
+
+/* Center: full size, fully visible — rotation set per-card from JS */
+.slider-card--center {
+  z-index: 2;
+  transform: translateX(0) scale(1) rotate(var(--center-rotation, 0deg));
+  opacity: 1;
+}
+
+/* Prev: slight tilt, partially visible on the left */
+.slider-card--prev {
+  z-index: 1;
+  transform: translateX(-52.3vw) scale(0.595) rotate(2deg);
+}
+
+/* Next: mirror tilt */
+.slider-card--next {
+  z-index: 1;
+  transform: translateX(52.3vw) scale(0.595) rotate(-2deg);
+}
+
+/* Hidden lateral (off-screen, used for recycled card entering) */
+.slider-card--off-left {
+  z-index: 0;
+  transform: translateX(-100vw) scale(0.595);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.slider-card--off-right {
+  z-index: 0;
+  transform: translateX(100vw) scale(0.595);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Slider flipper (inside each slider-card) */
+.slider-flipper {
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Default: show front */
+  transform: rotateY(0deg);
+}
+
+/* Flipped: show back (select / painted side) */
+.slider-flipper.is-flipped {
+  transform: rotateY(-180deg);
+}
+
+/* Disable flip transition during fast roulette scroll */
+.slider-flipper.no-flip-transition {
+  transition: none !important;
+}
+
+.slider-face {
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.slider-face--front {
+  transform: rotateY(0deg);
+}
+
+.slider-face--back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+}
+
+.slider-face img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  /* border-radius: 4px; */
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: filter 0.3s ease;
+}
+
+.slider-face img.is-thumb-placeholder {
+  filter: blur(4px);
+  transform: scale(1.02);
+}
+
+
+
+/* ============================================================
+   HERO EXPAND CLONE — transform-based shared element transition
+   ============================================================ */
+.hero-clone {
+  position: fixed;
+  z-index: 300;
+  /* border-radius: 4px; */
+  box-shadow: none;
+  pointer-events: none;
+  /* transform-origin: 50% 50% (default) — la rotación ocurre alrededor del centro
+   * del clone, igual que en .slider-card--center (transform-origin default).
+   * Con transform-origin: 0 0, la rotación era alrededor de la esquina superior
+   * izquierda, desplazando el centro visual ~8px respecto del slider card. */
+  transform-origin: 50% 50%;
+  transition: transform 400ms cubic-bezier(0.0, 0.0, 0.2, 1),
+              box-shadow 400ms ease;
+}
+
+.hero-clone img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  /* border-radius: 4px; */
+}
+
+/* Back button — replaces close ×  */
+#slider-close {
+  position: fixed;
+  top: 59px;
+  left: 56px;
+  z-index: 210;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+#slider-close span {
+  color: #00345D;
+  font-family: "Sofia Pro", sofia-pro, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: 15.4%;
+  text-underline-position: from-font;
+}
+
+@media (max-width: 699px) {
+  #slider-close {
+    top: 30px;
+    left: auto;
+    right: 20px;
+  }
+
+  .zoom-btn {
+    width: 45px;
+    height: 45px;
+    padding: 12px;
+  }
+
+  #slider-prev,
+  #slider-next {
+    width: 45px;
+    height: 45px;
+    padding: 12px;
+  }
+
+  .slider-card {
+    width: 80vw;
+  }
+}
+
+/* Counter — visually hidden but available for screen readers */
+#slider-counter {
+  display: none;
+}
+
+/* ── Live region for screen reader announcements ── */
+#slider-live {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============================================================
+   FOCUS STYLES — Accessibility
+   ============================================================ */
+#slider-close:focus {
+  outline: none;
+}
+
+#slider-close:focus-visible {
+  outline: 3px solid #00345D;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+#slider-prev:focus-visible,
+#slider-next:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
+.zoom-btn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .slider-card,
+  .slider-flipper,
+  .slider-face img,
+  .hero-clone,
+  .postcard-item,
+  .postcard-flipper,
+  #scene-bg,
+  #wall-container {
+    transition: none !important;
+  }
+
+  .slider-card.is-adjacent:hover .slider-face img {
+    transform: none;
+  }
+
+  .postcard-item:hover {
+    transform: rotate(var(--rotation, 0deg)) !important;
+  }
+}
+
+/* ============================================================
+   SCENE TRANSITION — wall ↔ slider
+   ============================================================ */
+
+/* Background overlay: blue → gray morph during hero flight */
+#scene-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 150;           /* above wall, below hero-clone (300) */
+  background: #F0F0EF;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#scene-bg.is-visible {
+  opacity: 1;
+}
+
+/* Wall cards fade out during hero expand */
+#wall-canvas.is-transitioning-out .postcard-item {
+  opacity: 0 !important;
+  transition: opacity 320ms cubic-bezier(0.4, 0, 1, 1) !important;
+  pointer-events: none !important;
+}
+
+/* Hide zoom controls during scene transition */
+#wall-canvas.is-transitioning-out ~ .zoom-controls {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+}

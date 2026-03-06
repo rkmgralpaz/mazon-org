@@ -1,0 +1,69 @@
+/*
+Theme Name: Mazon
+Author: Loyal Team
+Author URI: http://thisisloyal.com/
+Description: Mazon Website
+Version: 1.0
+*/
+
+// IMPORTS
+@import 'framework/variables';
+@import 'framework/fonts';
+@import 'framework/reset';
+@import 'framework/general';
+@import 'main/text-styles';
+@import 'main/global';
+@import 'main/modules/module-centered-paragraph';
+@import 'main/modules/module-mission';
+@import 'main/modules/module-single-feature';
+@import 'main/modules/module-single-feature-custom-bg';
+@import 'main/modules/module-take-action';
+@import 'main/modules/module-hero-video';
+@import 'main/modules/module-hero-slider';
+@import 'main/modules/module-news-and-events';
+@import 'main/modules/module-subscription';
+@import 'main/modules/module-boxes';
+@import 'main/modules/module-stories-slider';
+@import 'main/modules/module-by-the-numbers';
+@import 'main/modules/module-text-slider';
+@import 'main/modules/module-hero-buttons';
+@import 'main/modules/module-text-only';
+@import 'main/modules/module-two-column-items';
+@import 'main/modules/module-previous-items';
+@import 'main/modules/module-priorities-items';
+@import 'main/modules/module-stories-items';
+@import 'main/modules/module-staff-items';
+@import 'main/modules/module-board-items';
+@import 'main/modules/module-publications-items';
+@import 'main/modules/module-form';
+@import 'main/modules/module-grid-thumbnail-name';
+@import 'main/page-headers';
+@import 'main/news-post-content';
+@import 'main/stories-post-content';
+@import 'main/staff-board-post-content';
+@import 'main/accessibility-settings.scss';
+@import 'main/policy-actions.scss';
+@import 'main/postcards-intro';
+
+.twitter-tweet.twitter-tweet-rendered {
+    iframe {
+        width: 100% !important;
+    }
+}
+
+.iframe-video {
+    position: relative;
+    padding-top: 56.25%;
+
+    iframe {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+iframe.video {
+    width: 100% !important;
+}

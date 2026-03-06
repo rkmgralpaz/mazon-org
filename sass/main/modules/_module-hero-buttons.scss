@@ -1,0 +1,104 @@
+.module-hero-buttons{
+    position: relative;
+    background: white;
+    font-size: 28px;
+    line-height: 40px;
+    color: white;
+    .outer{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        display: table;
+        min-height: 350px;
+        width: 100%;
+        position: relative;
+        &.remove-top-space{
+            padding-top: 0px;
+            min-height: 0px;
+        }
+        &.remove-bottom-space{
+            padding-bottom: 0px;
+            min-height: 0px;
+        }
+        .inner{
+            position: relative;
+            font-size: 0;
+            width: 100%;
+            margin: 0 auto;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            z-index: 1;
+        }
+    }
+    .bg,
+    .image{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+    }
+    .image{
+        opacity: 0;
+        transition: opacity 0.5s;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        &.loaded{
+            opacity: 1;
+        }
+    }
+    .cta-button{
+        margin-right: 0px;
+        text-shadow: none;
+        line-height: 0px;
+        min-width: 230px;
+        //margin: 0 auto;
+        //margin-top: 25px;
+        padding: 20px;
+        padding-top: 17px;
+        padding-bottom: 19px;
+        border-radius: 35px;
+        background: $color-orange;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+        transition: background 0.3s;
+        line-height: 22px;
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        display: inline-block;
+        margin: 15px;
+        &:hover{
+            background: $color-light-blue;
+        }
+        @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+            //min-width: 150px;
+            width: 230px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            display: block;
+        }
+    }
+}
+body.large-fonts{
+    .module-hero-buttons{
+        .cta-button{
+            padding-top: 18px;
+            padding-bottom: 21px;
+            border-radius: 38px;
+            line-height: 24px;
+            font-size: 24px;
+        }
+    }
+}
+.module-hero-buttons-2 {
+  .inner {
+    &.left {
+      text-align: left;
+    }
+  }
+}
+

@@ -1,0 +1,120 @@
+
+.module-stories-items{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &.archive{
+        min-height: calc(100vh - 300px);
+    }
+    .label{
+        font-size: 23px;
+        line-height: 23px;
+        color: $color-dark-blue;
+        font-weight: 600;
+        margin-bottom: 40px;
+    }
+    .items{
+        //https://css-tricks.com/snippets/css/complete-guide-grid/
+        $module-priorities-grid-gap: 40px;
+        $module-priorities-grid-offset-3-col: calc($module-priorities-grid-gap / 3 * 2);
+        $module-priorities-template-3-col: calc(33.333% - #{$module-priorities-grid-offset-3-col});
+        $module-priorities-grid-offset-2-col: calc($module-priorities-grid-gap / 2);
+        $module-priorities-template-2-col: calc(50% - #{$module-priorities-grid-offset-2-col});
+        display: grid;
+        grid-template-columns: $module-priorities-template-3-col $module-priorities-template-3-col $module-priorities-template-3-col;
+        grid-gap: 60px $module-priorities-grid-gap;
+        &.two-columns{
+            @media only screen and (max-width: 1650px) {
+                grid-template-columns: $module-priorities-template-2-col $module-priorities-template-2-col;
+            }
+        }
+        @media only screen and (max-width: 1200px) {
+            grid-template-columns: $module-priorities-template-2-col $module-priorities-template-2-col;
+        }
+        @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+            grid-auto-flow: dense !important;
+            grid-template-columns: auto !important;
+        }
+        .post-item{
+            .thumbnail-wrapper{
+                max-width: 362px;
+                width: 100%;
+                margin-bottom: 40px;
+                @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+                    max-width: 400px;
+                }
+                .thumbnail{
+                    position: relative;
+                    background: $color-light-gray;
+                    overflow: hidden;
+                    padding-top: 105%;
+                    width: 100%;
+                    .image{
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        width: 100%;
+                        height: 100%;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                    }
+                }
+            }
+            .quote,
+            .title{
+                font-size: 24px;
+                line-height: 32px;
+                font-weight: 700;
+                transition: color 0.3s;
+            }
+            .quote{
+                color: $color-light-blue;
+                margin-bottom: 14px;
+            }
+            .title{
+                color: $color-burgundy;
+                svg{
+                    display: inline-block;
+                    *{
+                        fill: $color-burgundy;
+                        transition: fill 0.3s;
+                    }
+                }
+            }
+            &:hover{
+                .title{
+                    color: $color-orange;
+                    svg{
+                        *{
+                            fill: $color-orange;
+                        }
+                    }
+                }
+                .quote{
+                    color: $color-orange;
+                }
+            }
+        }
+    }
+}
+body.large-fonts{
+    .module-stories-items{
+        .label{
+            font-size: 30px;
+            line-height: 30px;
+        }
+        .items{
+            .post-item{
+                .quote,
+                .title{
+                    font-size: 30px;
+                    line-height: 40px;
+                    svg{
+                        width: 25px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}

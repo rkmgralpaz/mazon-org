@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# MacOS
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sass
+.sass-cache/
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build outputs (si aplicable)
+dist/
+build/

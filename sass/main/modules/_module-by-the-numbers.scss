@@ -1,0 +1,200 @@
+.module-by-the-numbers{
+    position: relative;
+    background-color: white;
+    .outer{
+        padding-top: 70px;
+        padding-bottom: 60px;
+        .inner{
+            .slides{
+                margin-bottom: 20px;
+                min-height: 170px;
+                .slide{
+                    height: 0px;
+                    overflow: hidden;
+                    opacity: 0;
+                    transform: translateY(30px);
+                    $module-by-the-numbers-grid-gap: 70px;
+                    $module-by-the-numbers-grid-offset-2-col: calc($module-by-the-numbers-grid-gap / 2);
+                    $module-by-the-numbers-template-2-col: calc(50% - #{$module-by-the-numbers-grid-offset-2-col});
+                    display: grid;
+                    grid-template-columns: $module-by-the-numbers-template-2-col $module-by-the-numbers-template-2-col;
+                    grid-gap: $module-by-the-numbers-grid-gap;
+                    @media only screen and (max-width: $breakpoint-ipad-landscape) {
+                        $module-by-the-numbers-grid-gap: 30px;
+                        $module-by-the-numbers-grid-offset-2-col: calc($module-by-the-numbers-grid-gap / 2);
+                        $module-by-the-numbers-template-2-col: calc(50% - #{$module-by-the-numbers-grid-offset-2-col});
+                        grid-template-columns: $module-by-the-numbers-template-2-col $module-by-the-numbers-template-2-col;
+                        grid-gap: $module-by-the-numbers-grid-gap;
+                    }
+                    @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+                        grid-auto-flow: dense;
+                        grid-template-columns: auto;
+                        grid-gap: 0px;
+                    }
+                    &.visible{
+                        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+                        transition-delay: 0.5s;
+                        opacity: 1;
+                        transform: translateY(0px);
+                        height: auto;
+                    }
+                }
+            }
+            .dots{
+                display: block;
+                margin-bottom: 0px;
+                margin-left: -10px;
+                @media only screen and (max-width: 1200px) {
+                    margin-bottom: 45px;
+                }
+                .button{
+                    position: relative;
+                    cursor: pointer;
+                    vertical-align: middle;
+                    display: inline-block;
+                    padding: 10px;
+                    margin-right: 0px;
+                    opacity: 0;
+                    transform: translateX(50px);
+                    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+                    &:nth-child(1){
+                        transition-delay: 0.5s;
+                    }
+                    &:nth-child(2){
+                        transition-delay: 0.55s;
+                    }
+                    &:nth-child(3){
+                        transition-delay: 0.6s;
+                    }
+                    &:nth-child(4){
+                        transition-delay: 0.65s;
+                    }
+                    &:nth-child(5){
+                        transition-delay: 0.7s;
+                    }
+                    &:nth-child(6){
+                        transition-delay: 0.75s;
+                    }
+                    &:nth-child(7){
+                        transition-delay: 0.8s;
+                    }
+                    &:nth-child(8){
+                        transition-delay: 0.85s;
+                    }
+                    &:nth-child(9){
+                        transition-delay: 0.9s;
+                    }
+                    &:nth-child(10){
+                        transition-delay: 0.95s;
+                    }
+                    .dot{
+                        width: 14px;
+                        height: 14px;
+                        background: $color-orange;
+                        border-radius: 100%;
+                        transition: background 0.3s;
+                    }
+                    &.selected,
+                    &:hover{
+                        .dot{
+                            background: $color-light-blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .colorize{
+        color: $color-orange;
+    }
+    .label{
+        font-size: 23px;
+        line-height: 23px;
+        font-weight: 700;
+        color: $color-orange;
+        margin-bottom: 36px;
+        opacity: 0;
+        transition: 0.5s 0.5s;
+    }
+    .title{
+        font-size: 50px;
+        line-height: 50px;
+        letter-spacing: -0.03em;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 15px;
+        color: $color-burgundy;
+        @media only screen and (max-width: $breakpoint-ipad-landscape) {
+            font-size: 40px;
+            line-height: 40px;
+        }
+    }
+    .text{
+        margin-bottom: 28px;
+        font-size: 28px;
+        line-height: 38px;
+        color: $color-light-blue;
+        justify-content: normal;
+    }
+    .cta-button{
+        font-size: 23px;
+        line-height: 23px;
+        font-weight: 600;
+        color: white;
+        svg{
+            margin-left: 5px;
+            *{
+                fill: white;
+                transition: fill 0.3s;
+            }
+        }
+        a{
+            color: white;
+            transition: color 0.3s;
+            &:hover{
+                color: $color-orange;
+                svg{
+                    *{
+                        fill: $color-orange;
+                    }
+                }
+            }
+        }
+    }
+    &.loaded{
+        .outer .inner{
+            .label{
+                opacity: 1;
+            }
+            .dots .button{
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+    }
+}
+body.large-fonts{
+    .module-single-feature{
+        .outer{
+            //padding-top: 100px;
+            //padding-bottom: 100px;
+        }
+        .title{
+            font-size: 51px;
+            line-height: 51px;
+            @media only screen and (max-width: $breakpoint-ipad-landscape) {
+                font-size: 41px;
+                line-height: 41px;
+            }
+        }
+        .text{
+            margin-bottom: 25px;
+            font-size: 35px;
+            line-height: 35px;
+        }
+        .cta-button{
+            font-size: 30px;
+            line-height: 30px;
+        }
+    }
+}

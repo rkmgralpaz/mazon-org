@@ -1,0 +1,191 @@
+.module-news-and-events{
+    position: relative;
+    background-color: $color-light-gray;
+    .outer{
+        padding-top: 40px;
+        padding-bottom: 70px;
+        .inner{
+            @media only screen and (max-width: $standard-width) {
+                
+            }
+        }
+    }
+    .top-area{
+        padding-bottom: 40px;
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+    }
+    .boxes{
+        //https://css-tricks.com/snippets/css/complete-guide-grid/
+        $news-and-events-grid-gap: 30px;
+        $news-and-events-grid-offset-3-col: calc($news-and-events-grid-gap / 3 * 2);
+        $news-and-events-template-3-col: calc(33.333% - #{$news-and-events-grid-offset-3-col});
+        $news-and-events-grid-offset-2-col: calc($news-and-events-grid-gap / 2);
+        $news-and-events-template-2-col: calc(50% - #{$news-and-events-grid-offset-2-col});
+        display: grid;
+        grid-template-columns: $news-and-events-template-3-col $news-and-events-template-3-col $news-and-events-template-3-col;
+        grid-gap: $news-and-events-grid-gap;
+        @media only screen and (max-width: 1250px) {
+            grid-template-columns: $news-and-events-template-2-col $news-and-events-template-2-col;
+        }
+        @media only screen and (max-width: 900px) {
+            grid-auto-flow: dense;
+            grid-template-columns: auto;
+        }
+        @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+            //grid-gap: 20px;
+        }
+        @media only screen and (max-width: $breakpoint-iphone-portrait - 1px) {
+            width: calc(100% + 40px);
+            margin-left: -20px;
+        }
+        .box{
+            min-height: 100px;
+            background: white;
+            padding: 50px 40px;
+            /*
+            //sticky to bottom
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: space-between;
+            */
+            //
+            //hide 3rd box in two columns
+            @media only screen and (max-width: 1200px) {
+                &:nth-child(3){
+                    //display: none;
+                }
+            }
+            @media only screen and (max-width: 900px) {
+                &:nth-child(3){
+                    //display: block;
+                }
+            }
+            @media only screen and (max-width: $breakpoint-iphone-plus-portrait) {
+                padding: 35px 20px;
+                padding-bottom: 40px;
+            }
+        }
+    }
+    .colorize{
+        color: $color-orange;
+    }
+    .label{
+        font-size: 23px;
+        line-height: 23px;
+        font-weight: 600;
+        color: $color-dark-blue;
+        @media only screen and (max-width: $breakpoint-iphone-portrait - 1px) {
+            font-size: 20px;
+            line-height: 20px;
+        }
+    }
+    .title{
+        font-size: 28px;
+        line-height: 38px;
+        color: $color-light-blue;
+        font-weight: 700;
+    }
+    .text{
+        padding-top: 30px;
+        font-size: 20px;
+        line-height: 32px;
+        color: $color-dark-blue;
+        b,
+        strong{
+            font-weight: 700;
+        }
+        a{
+            display: inline-block;
+            font-weight: 700;
+            color: $color-dark-blue;
+            border-bottom: solid 1px $color-dark-blue;
+            transition: color 0.3s, border 0.3s;
+            &:hover{
+                color: $color-light-blue;
+                border-color: $color-light-blue;
+            }
+        }
+    }
+    .cta-button{
+        font-size: 24px;
+        line-height: 24px;
+        color: $color-orange;
+        font-weight: 600;
+        @media only screen and (max-width: $breakpoint-iphone-portrait - 1px) {
+            font-size: 20px;
+            line-height: 20px;
+        }
+        span{
+            color: $color-orange;
+            border-bottom: solid 1px $color-orange;
+            transition: color 0.3s, border 0.3s;
+        }
+        svg{
+            margin-left: 5px;
+            @media only screen and (max-width: $breakpoint-iphone-portrait) {
+                margin-left: 0px;
+            }
+            *{
+                fill: $color-orange;
+                transition: fill 0.3s;
+            }
+        }
+        &:hover{
+            span{
+                color: $color-dark-blue;
+                border-color: $color-dark-blue;
+            }
+            svg{
+                *{
+                    fill: $color-dark-blue;
+                }
+            }
+        }
+    }
+}
+body.large-fonts{
+    .module-news-and-events{
+        .outer{
+            //padding-top: 100px;
+            //padding-bottom: 100px;
+        }
+        .label{
+            font-size: 30px;
+            line-height: 30px;
+            @media only screen and (max-width: $breakpoint-iphone-plus-portrait - 3px) {
+                font-size: 26px;
+                line-height: 26px;
+            }
+            @media only screen and (max-width: $breakpoint-iphone-portrait - 1px) {
+                font-size: 23px;
+                line-height: 23px;
+            }
+        }
+        .title{
+            font-size: 35px;
+            line-height: 48px;
+        }
+        .text{
+            font-size: 25px;
+            line-height: 40px;
+        }
+        .cta-button{
+            font-size: 30px;
+            line-height: 30px;
+            @media only screen and (max-width: $breakpoint-iphone-plus-portrait - 3px) {
+                font-size: 26px;
+                line-height: 26px;
+            }
+            @media only screen and (max-width: $breakpoint-iphone-portrait - 1px) {
+                font-size: 23px;
+                line-height: 23px;
+            }
+        }
+    }
+}

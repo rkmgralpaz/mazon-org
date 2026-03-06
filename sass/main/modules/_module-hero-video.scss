@@ -1,0 +1,120 @@
+.module-hero-video{
+    position: relative;
+    background-color: white;
+    .outer{
+        position: relative;
+        height: 100%;
+        display: flex;
+        /*
+        height: 75vh;
+        height: calc(100vh - 220px);
+        min-height: 500px;
+        @media only screen and (max-width: $breakpoint-iphone-plus-portrait) {
+            min-height: 400px;
+        }
+        @media only screen and (max-height: $breakpoint-iphone-plus-portrait) {
+            min-height: 0px;
+            height: auto;
+        }
+        */
+        height: calc(100vh - 220px);
+        min-height: 300px;
+        max-height: 700px;
+        .inner{
+            display: flex;
+            align-self: center;
+            height: 100%;
+            min-height: 500px;
+            margin: 0 auto;
+            @media only screen and (max-width: $breakpoint-iphone-plus-portrait) {
+                min-height: 400px;
+            }
+            @media only screen and (max-height: $breakpoint-iphone-plus-portrait) {
+                min-height: 0px;
+                height: auto;
+            }
+            .holder{
+                margin: 0 auto;
+                display: flex;
+                align-self: center;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                position: relative;
+                z-index: 1;
+                color: white;
+                text-align: center;
+                flex-direction: column;
+                //flex-flow: column;
+                font-size: 42px;
+                line-height: 50px;
+                text-shadow: 0px 0px 20px rgba(black,0.1);
+                .video-button{
+                    text-shadow: none;
+                    line-height: 0px;
+                    min-width: 164px;
+                    margin: 0 auto;
+                    margin-top: 25px;
+                    padding: 20px;
+                    border-radius: 35px;
+                    background: $color-light-blue;
+                    text-align: center;
+                    display: block;
+                    cursor: pointer;
+                    transition: background 0.3s;
+                    &:hover{
+                        background: $color-orange;
+                    }
+                    @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+                        min-width: 120px;
+                    }
+                    *{
+                        display: inline-block;
+                        font-size: 16px;
+                        line-height: 20px;
+                        font-weight: 500;
+                        vertical-align: middle;
+                    }
+                    .time{
+                        margin-left: 5px;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .bg{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+            &.loaded{
+                opacity: 1;
+            }
+            //background-image: url(assets/video-bg.jpg);
+        }
+    }
+}
+body.large-fonts{
+    .module-hero-video{
+        .outer{
+            .inner{
+                font-size: 52px;
+                line-height: 62px;
+                .video-button{
+                    *{
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
+                    svg{
+                        transform: translateY(1px);
+                    }
+                }
+            }
+        }
+    }
+}

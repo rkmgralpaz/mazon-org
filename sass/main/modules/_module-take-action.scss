@@ -1,0 +1,119 @@
+.module-take-action{
+    position: relative;
+    background-color: $color-burgundy;
+    .outer{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background-repeat: no-repeat;
+        background-image: url(assets/shape-module-single-feature.svg);
+        background-position: 100% calc(100% + 243px);
+        @media only screen and (max-width: $full-hd-width) {
+            background-position: calc(100% + 36px) calc(100% + 243px);
+        }
+        @media only screen and (max-width: $standard-width) {
+            background-position: calc(100% + 36px) calc(100% + 243px);
+        }
+        @media only screen and (max-width: $breakpoint-ipad-landscape) {
+            background-position: calc(100% + 36px) calc(100% + 243px);
+        }
+        .inner{
+            display: flex;
+            @media only screen and (max-width: $breakpoint-ipad-landscape) {
+                display: block;
+            }
+            .left{
+                //float: left;
+                width: 50%;
+                padding-right: $margin-large-2;
+                @media only screen and (max-width: $breakpoint-ipad-landscape) {
+                    width: 100%;
+                    padding-right: 0px;
+                    padding-bottom: 50px;
+                }
+            }
+            .right{
+                //float: right;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                @media only screen and (max-width: $breakpoint-ipad-landscape) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .colorize{
+        color: $color-orange;
+    }
+    .label{
+        font-size: 24px;
+        line-height: 24px;
+        color: white;
+        margin-bottom: 50px;
+    }
+    .title{
+        font-size: 42px;
+        line-height: 50px;
+        color: black;
+        letter-spacing: -0.03em;
+        font-weight: 400;
+        color: white;
+    }
+    .text{
+        margin-bottom: 25px;
+        font-size: 28px;
+        line-height: 40px;
+        color: $color-text-take-action;
+        justify-content: normal;
+    }
+    .cta-button{
+        font-size: 23px;
+        line-height: 23px;
+        color: white;
+        font-weight: 600;
+        svg{
+            margin-left: 5px;
+            *{
+                fill: white;
+                transition: fill 0.3s;
+            }
+        }
+        a{
+            color: white;
+            transition: color 0.3s;
+            &:hover{
+                color: $color-orange;
+                svg{
+                    *{
+                        fill: $color-orange;
+                    }
+                }
+            }
+        }
+    }
+}
+body.large-fonts{
+    .module-take-action{
+        .outer{
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .label{
+            font-size: 30px;
+            line-height: 30px;
+        }
+        .title{
+            font-size: 52px;
+            line-height: 62px;
+        }
+        .text{            
+            font-size: 35px;
+            line-height: 50px;              
+        }
+        .cta-button{
+            font-size: 30px;
+            line-height: 30px;
+        }
+    }
+}

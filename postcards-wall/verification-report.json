@@ -1,0 +1,1341 @@
+{
+    "postcard-001.webp": {
+        "status": "ok",
+        "confidence": 8,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-002.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'where' appears to be part of a continuous sentence but the transcription breaks the flow awkwardly",
+            "There appears to be punctuation missing that affects readability",
+            "The phrase structure around 'citizenry where is' seems awkward and may need rephrasing for clarity"
+        ],
+        "suggested_fix": "We desperately need SNAP! 47 million people — maybe more — are facing starvation and poverty in this great nation of ours — one that supposedly cares about the welfare of all its citizenry. Where is the justice of granting tax cuts to those that don't need financial help, while denying basic humanity to those that are in dire straits? Please show that you care and support SNAP. Angela B. Pittsburgh, PA"
+    },
+    "postcard-003.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "Signature appears to be 'Carol K Yastrzeh. 4' not 'Carol K Pittsburgh, PA'",
+            "The '4' at the end is part of the signature, not a separate element",
+            "Location may be part of the signature line but is unclear"
+        ],
+        "suggested_fix": "Food Safety & Food Security Are our most important Assets. When People Go Hungry, our Country Fails When Food is unsafe & People Become Sick or Die our Country Fails Please Don't Weaken our Food Inspection Process. Please Don't Let our Children Die From Hunger Don't Let our Country Fail Carol K Yastrzeh. 4"
+    },
+    "postcard-004.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "First line reads 'If we can conquer space' but image shows 'If we CAN conquer space' with emphasis",
+            "Missing 'To:' field label",
+            "Missing 'USDA' which appears as the recipient",
+            "Signature area shows 'Joe M' on left and 'PGHPA' on right, but layout not captured",
+            "The word order and structure should better reflect the postcard format"
+        ],
+        "suggested_fix": "If we CAN conquer space, we can Conquer childhood hunger\n\nTo: USDA\n\nJoe M                    PGHPA"
+    },
+    "postcard-005.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The closing appears to read 'Amy Bzk, PA' or similar - the middle part after 'Amy' is unclear but doesn't look like 'Pgh.' which would be Pittsburgh abbreviation"
+        ],
+        "suggested_fix": "When will the government decide that the hunger in this country is bad enough for them to step in to help? How can we watch our neighbors struggle + fail and still feel good about our priorities Amy Bzk, PA"
+    },
+    "postcard-006.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-007.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-008.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'PLENTY' appears to have asterisks or stars around it in the image that weren't captured",
+            "There are red asterisks\/stars decorating the text that are part of the visual design but not transcribed",
+            "The asterisks appear before 'AMERICA' and after it, and around 'LAND OF PLENTY'"
+        ],
+        "suggested_fix": "AMERICA * is a * LAND OF * PLENTY * we can fund SNAP we MUST fund SNAP C.C. Eaton Wrens, GA"
+    },
+    "postcard-009.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-010.webp": {
+        "status": "needs_review",
+        "confidence": 9,
+        "issues": [
+            "The name appears to be 'Beth G.' but the handwriting looks more like it could be 'Both G.' - the first letter is ambiguous",
+            "The state 'Illinois' appears to be written as 'Illinus' in the handwriting"
+        ],
+        "suggested_fix": "Protect Trans Kids from HUNGER! Both G. Illinus"
+    },
+    "postcard-011.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'Hungry' appears to be underlined in the image but this isn't noted",
+            "There's an exclamation mark after 'again' that should be noted",
+            "The signature location 'Asheville' should be 'Jsheullle' or similar - the handwriting is unclear but doesn't match 'Asheville'"
+        ],
+        "suggested_fix": "MAHA cannot mean Make America Hungry again! Do not cut SNAP to 44 million folks! Batsheva, Jsheullle NC"
+    },
+    "postcard-012.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-013.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "First line: 'Love thy neighbor' appears to be in quotes in the handwriting",
+            "Line 2: 'to' should be 'for' - it reads 'neighbors for be' not 'neighbors to be'",
+            "Line 3: 'cannot' appears to be 'cannot' which is correct",
+            "Line 4: There's a dash after 'cannot' that should be preserved more clearly",
+            "Closing: Missing the zip code '02138' which appears after Cambridge MA in the address section on the right side"
+        ],
+        "suggested_fix": "\"Love thy neighbor\" means we cannot let our neighbors for be hungry. We cannot — should not — take food from the poor to give tax cuts to the rich. SNAP is over 50 years old. This is not the time to cut it Save SNAP! Pamela W Cambridge MA"
+    },
+    "postcard-014.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-015.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "'famalies' should be 'families'",
+            "'communitits' should be 'communities'"
+        ],
+        "suggested_fix": "Cuts to S.N.A.P HURT: children seniors grocery stores farmers the disabled our friends. our families. our neighbors. our communities. DON'T CUT SNAP -SARAH O. IOWA"
+    },
+    "postcard-016.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-017.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'children' appears to end with a different word or phrase - looks like 'children' with a signature or name after it, possibly 'mike' or similar"
+        ],
+        "suggested_fix": "We'd not need charity if the world were just. Feed the children."
+    },
+    "postcard-018.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-019.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The first word appears to be 'be' but in the image it looks more like 'we' with stylized handwriting",
+            "Missing period after 'american't' that appears in the image",
+            "Missing colon after 'americans' before 'save'",
+            "The exclamation mark after 'program' might be missing"
+        ],
+        "suggested_fix": "we an american not an american't support our fellow americans: save the S.N.A.P. program! Kyle O. IOWA"
+    },
+    "postcard-020.webp": {
+        "status": "needs_review",
+        "confidence": 9,
+        "issues": [
+            "PRIVLAGE is misspelled - should be PRIVILEGE",
+            "Missing periods in S.N.A.P. - should be formatted as S.N.A.P."
+        ],
+        "suggested_fix": "FOOD SHOULD NOT BE A PRIVILEGE TAKE ACTION SAVE S.N.A.P."
+    },
+    "postcard-021.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'us' should be capitalized as 'US' (referring to United States)",
+            "The phrase 'in the shoes of someone' appears incomplete - should likely be 'in the shoes of someone. You've' (two separate sentences)",
+            "Minor: signature appears to be 'Siena J.' which matches"
+        ],
+        "suggested_fix": "I want to live in a country where people are caring and empathetic. I want to live in a place where everyone has what they need to thrive, let alone survive. Hunger is a large problem in the US and getting rid of SNAP benefits doesn't help - it makes it worse. I know you've heard this many times but really put yourself in the shoes of someone. You've lost your job due to a misunderstanding and suddenly you can't provide for your family. This is common and I know people like this. Please help them. ♥ Siena J."
+    },
+    "postcard-022.webp": {
+        "status": "ok",
+        "confidence": 10,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-023.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-024.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-025.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The family name appears to be 'Regen' or 'Ryen' rather than 'Rosen' - the handwriting shows different letter formations than what 'Rosen' would require"
+        ],
+        "suggested_fix": "USA needs SNAP Don't defund SNAP! The Regen family Charlotte NC"
+    },
+    "postcard-026.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'Keep' appears correct",
+            "The phrase 'SNAP' appears correct",
+            "The phrase 'in BLOOM!' appears correct",
+            "However, examining the handwriting more carefully, there appears to be additional text above 'in BLOOM!' that looks like it might say 'Kelp' at the top",
+            "The signature area shows 'Linda L.' followed by what appears to be 'Charlotte NC' but the handwriting is difficult to read with certainty"
+        ],
+        "suggested_fix": "Keep SNAP in BLOOM! Linda L. Charlotte NC"
+    },
+    "postcard-027.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-028.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The transcription misses handwritten signatures\/text at the bottom of the postcard that appear to read something like 'Zyra Jr' and possibly another name or word"
+        ],
+        "suggested_fix": "HUNGER HURTS... SNAP HELPS! Zyra Jr [signature\/name]"
+    },
+    "postcard-029.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-030.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The name appears to be 'Amon Pedrazas' in the current transcription, but examining the signature more carefully, it looks like it might be 'Amon Pedraza' (without the 's') or possibly a different name altogether",
+            "Minor capitalization: 'protect' should likely be capitalized as 'Protect' to match the emphasis style of the message"
+        ],
+        "suggested_fix": "Over 47 million people are struggling to feed themselves and their families Protect SNAP benefits ! Amon Pedraza"
+    },
+    "postcard-031.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'People' appears to be 'PEOPLE' (all caps)",
+            "There are two exclamation marks after 'PLEASE' at the end, not shown in transcription",
+            "The layout\/line breaks don't match - 'PLEASE' appears twice but organized differently than transcribed"
+        ],
+        "suggested_fix": "PLEASE...!! PEOPLE NEED to EAT!! PLEASE"
+    },
+    "postcard-032.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-033.webp": {
+        "status": "ok",
+        "confidence": 10,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-034.webp": {
+        "status": "needs_review",
+        "confidence": 9,
+        "issues": [
+            "HUNGY is misspelled - should be HUNGRY"
+        ],
+        "suggested_fix": "NO ONE DESERVES TO GO HUNGRY"
+    },
+    "postcard-035.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'stay' should be 'starve' - the handwriting shows 'starve' not 'stay'"
+        ],
+        "suggested_fix": "How can the \"wealthiest nation on earth\" let its own citizens starve hungry? Use our resources to feed hungry Americans Expand SNAP - Anonymous, Colorado"
+    },
+    "postcard-036.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'that' appears to be 'that' in the image, but the overall message seems correct. However, upon closer inspection, the handwriting is somewhat unclear and should be verified."
+        ],
+        "suggested_fix": "A hungry child in the classroom cannot read. Isn't that enough to ensure funding for SNAP? Please act accordingly Jill G."
+    },
+    "postcard-037.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-038.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "Location appears to be 'Boca Raton, FL' not 'Boca Reton, FL' - misspelling of Raton"
+        ],
+        "suggested_fix": "Dear Sec. Rollins, My faith calls me to Act for Justice. Cutting SNAP does Not just take FOOD OFF TABLES—it hurts grocery stores, farmers, and com- munities, especially in RURAL areas, making sure people in the US have enough to eat should be a priority! Janyce F, Boca Raton, FL"
+    },
+    "postcard-039.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-040.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The name 'Quintai B.' appears questionable - the handwriting could be interpreted differently, possibly 'Quintal B.' or another variant",
+            "Need to verify the exact spelling of the first name as the handwriting is somewhat unclear"
+        ],
+        "suggested_fix": "WE ❤️ SNAP! IT WORKS. Protect SNAP funding! Quintal B. Thomasville GA"
+    },
+    "postcard-041.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "'th US' should be 'the US'",
+            "'Hudgins' appears to be 'Hudgino' or similar - final letter unclear",
+            "Missing period after 'justice' but exclamation mark present in image"
+        ],
+        "suggested_fix": "My faith calls me to act for Tzedek, or justice! We are facing an unacceptable hunger crisis in the US. Right now, over 47 million people are struggling to feed themselves and their families. Sharon J. Hudgino Peachtree City, GA"
+    },
+    "postcard-042.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-043.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'the' before 'elderly' appears to be missing in the original handwriting - it shows as just 'elderly' without 'the'"
+        ],
+        "suggested_fix": "Supporting the SNAP Program supports: farmers elderly Veterans children single parents and other struggling Americans"
+    },
+    "postcard-044.webp": {
+        "status": "ok",
+        "confidence": 10,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-045.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The text 'be an' appears to be 'We an' in the image",
+            "There appears to be punctuation after 'american' that may not be captured",
+            "The spacing and emphasis from the underlines is not reflected"
+        ],
+        "suggested_fix": "We an american not an american't support our fellow americans : save the S.N.A.P. program! Kyle O. IOWA"
+    },
+    "postcard-046.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-047.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-048.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-049.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The signature appears to read 'Emma, Minot' but looking more carefully at the handwriting, the second word may be 'Minot' but could also be interpreted differently. The overall structure and most words are correct, but the signature line deserves closer scrutiny."
+        ],
+        "suggested_fix": "Dear Secretary, Help America by providing food for success. Do the Right Thing Emma, Minot"
+    },
+    "postcard-050.webp": {
+        "status": "ok",
+        "confidence": 10,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-051.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-052.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "'Dont' should be 'Don't' with apostrophe",
+            "'Budy' appears to be 'BuDy' based on handwriting style but likely intended as 'Body'",
+            "'huNgrey' has unusual capitalization - appears to be 'hun grey' or 'hungry' misspelled"
+        ],
+        "suggested_fix": "Please I Don't Want any BuDy to be hun grey Sophie"
+    },
+    "postcard-053.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-054.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-055.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "First word 'Dear' appears correct",
+            "Second word 'Secretary' appears to be 'Secretary'",
+            "Third word 'Rollins' should be 'Rollins' with capital R",
+            "The signature appears to show 'Sarah Sobel (OH)' which matches"
+        ],
+        "suggested_fix": "Dear Secretary Rollins, As a mom, nutrition is crucial for children to have for growth. It is my responsibility, as a mom and Jew, to ensure that all children and family have what they need. Please protect SNAP!!! Sincerely, Sarah Sobel (OH)"
+    },
+    "postcard-056.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'Maintain' appears to be 'Maintain' with a strikethrough or cross-out mark through it in the original image"
+        ],
+        "suggested_fix": "I want my tax dollars to support SNAP benefits for those in need! We all want a healthy country. Maintain SNAP. - Ohio Voter"
+    },
+    "postcard-057.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The signature appears to read 'Jin Litman' but the handwriting shows 'Jim Litman' - the first letter looks more like a 'J' with a descender typical of 'J' rather than 'Jin'"
+        ],
+        "suggested_fix": "Roses are fed by the generously shared waters of the sky. Why not be one of those clouds, and contribute to the growth of a beautiful part of the community? - Jim Litman"
+    },
+    "postcard-058.webp": {
+        "status": "ok",
+        "confidence": 10,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-059.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-060.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-061.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The abbreviation 'PN W' appears unclear - could be 'PNW' (Pacific Northwest)",
+            "The period after 'Lorraine B' might be intentional formatting but seems inconsistent with signature style"
+        ],
+        "suggested_fix": "Dear Secretary Rollins, Right now, over 47 million people are struggling to feed themselves and their families. Any cuts to SNAP\/WIC will be devastating to our most precious resource— OUR CHILDREN. No one should go hungry in this country! Do NOT CUT USDA FOOD PROGRAMS. Put our CHILDREN AND OUR FUTURE FIRST. fighting despair in the PNW. Lorraine B. Olympia, WA"
+    },
+    "postcard-062.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The signature appears to be 'Jufgang' in the transcription but looks more like 'Jeffrey' or similar in the image",
+            "There may be minor punctuation differences",
+            "The asterisk after 'lives' should be examined for placement"
+        ],
+        "suggested_fix": "Secretary Brooke Rollins, SNAP saves lives! * children Elderly Disabled Families Poor Vulnerable In the wealthy US we must provide adequate nutrition for all. Jeffrey"
+    },
+    "postcard-063.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "Word 'desenes' appears to be misread - should likely be 'deserves'",
+            "Phrase 'Why & how can' appears incomplete - image shows 'Why & now can'",
+            "Missing punctuation - there should be a question mark after 'happen'"
+        ],
+        "suggested_fix": "Do our children, mothers, fathers, grandparents, students, deserve to be hungry? Why & now can we allow this to happen? No one deserves to go & be hungry -Chloe"
+    },
+    "postcard-064.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The signature appears to read 'Laurie d.' but should be 'Jaurie d.' or possibly 'Laurie d.' - the handwriting is ambiguous but looks more like 'J' than 'L'"
+        ],
+        "suggested_fix": "Secretary Rollins, Join us at our local food bank to see how many people rely on our federal assistance to feed their kids. Cutting SNAP hurts us all. Protect and Fund SNAP. Jaurie d. North Bend WA"
+    },
+    "postcard-065.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "Word 'suffing' appears to be 'suffering' in the image",
+            "Signature appears to be 'TSecera' or similar, not 'JSeeera'"
+        ],
+        "suggested_fix": "I am writing because people need food, and are suffering from starvation. SNAP is one of the best food support programs we have, to help people in need. SNAP NEEDS to continue to support people struggling with financial problems. DON'T cut off funding! - TSecera"
+    },
+    "postcard-066.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-067.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'grow' appears to be written as 'grow' but the handwriting shows 'learn+grow' which may have additional marks or characters",
+            "There is a 'To:' address block on the right side that was not transcribed",
+            "The sender identification shows 'Rachel C.' followed by 'Maple Valley, WA' but this formatting and exact text should be verified"
+        ],
+        "suggested_fix": "Our local food bank ensures that families can eat, children have the nutrition to learn+grow and our communities stay healthy! Protect support for local food banks and protect SNAP! Rachel C. Maple Valley, WA"
+    },
+    "postcard-068.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-069.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-070.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "PROGAM is misspelled - should be PROGRAM",
+            "dont should have an apostrophe - don't"
+        ],
+        "suggested_fix": "don't keep the hunger keep the SNAP PROGRAM Ellen AGE 9 Washington D.C."
+    },
+    "postcard-071.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "'SNap' should be 'SNAP' (all caps)",
+            "'Cousin mom' should be 'Cousin Mom' (capitalized)",
+            "'Emilia' appears to be 'Emilin' based on the handwriting"
+        ],
+        "suggested_fix": "1 in 8 Rely on SNAP - My uncle - My Cousin - My Cousin Mom - My uncle Don't Cut SNAP - Emilin"
+    },
+    "postcard-072.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "Name appears to be 'Marizio M.' but looks more like 'Marizio M' without period",
+            "Location is 'Wash, DC' but should be 'Wash, DC' - this is correct",
+            "Need to verify exact spelling of first name - could be 'Marizio' or similar variant"
+        ],
+        "suggested_fix": "Millions of children will go hungry if SNAP is cut. Marizio M. Wash, DC"
+    },
+    "postcard-073.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'preserve' appears to be 'PRESERVE' in all caps in the image",
+            "There may be punctuation differences - the handwriting shows emphasis with capitalization that should be preserved"
+        ],
+        "suggested_fix": "Snap helps alleviate hunger and poverty. PLEASE PRESERVE SNAP full funding! Katrina J. Myrtle Bch, SC"
+    },
+    "postcard-074.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-075.webp": {
+        "status": "ok",
+        "confidence": 10,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-076.webp": {
+        "status": "ok",
+        "confidence": 10,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-077.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-078.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-079.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-080.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The location 'Charleston SC' does not appear in the handwritten text",
+            "The last line appears to read 'Charleston SC' in the transcription but the actual handwriting shows something different - looks more like 'Charleston' or similar but not clearly 'SC'"
+        ],
+        "suggested_fix": "Hunger Hurts. SNAP HELPS. Please preserve SNAP Lee R. Charleston"
+    },
+    "postcard-081.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-082.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "'againt' should be 'against'",
+            "'Gail Bend OR.' appears to be 'Gail Bend OR' but signature line is difficult to read with certainty"
+        ],
+        "suggested_fix": "Dear Madam Secretary, My faith calls me to speak out against the USDA budget cuts and the gutting of SNAP. The SNAP program lifts millions out of poverty and supports the rural \/ agricultural areas of the US. The hungry need SNAP and so do the farmers! A volunteer, Gail Bend OR."
+    },
+    "postcard-083.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The signature appears to be 'Callie' not 'Collie' - the first letter looks more like 'Ca' than 'Co'"
+        ],
+        "suggested_fix": "Dear Ms Rollins; I work with many homeless individuals in Bend Oregon and witness their despair, hopelessness, pain and hunger. SNAP is a basic simple way to help fellow Americans. This is why I pay taxes, to help, not to further inflict pain. Respectfully, Callie"
+    },
+    "postcard-084.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "'Rollins' appears to be 'Collins' in the image",
+            "The budget amount appears to be '$250 billion' not '$230 billion'",
+            "Minor: 'USDA' might be part of a longer phrase but this is uncertain"
+        ],
+        "suggested_fix": "Honorable Secretary Collins, We are now facing an unacceptable hunger crisis in our United States. Right now, over 47 million people are struggling to feed themselves and their families. USDA budget cuts of $250 billion in the next decade will have catastrophic consequences for hungry people and farmers. Mark S. Hillsboro OR"
+    },
+    "postcard-085.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-086.webp": {
+        "status": "ok",
+        "confidence": 10,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-087.webp": {
+        "status": "needs_review",
+        "confidence": 9,
+        "issues": [
+            "The word 'derserves' appears to be misspelled - should be 'deserves'",
+            "The word 'Every' appears to say 'Everyone' as one word in the image",
+            "The spacing and line breaks don't fully capture the handwritten layout"
+        ],
+        "suggested_fix": "To eat or not to eat That should not be a question Everyone deserves to EAT"
+    },
+    "postcard-088.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The name appears to be 'Margurte L.' or similar, not 'Augusta L.' - the handwriting shows different letters",
+            "The transcription is missing the destination address on the right side: 'To: US Dept of Agriculture, 1400 Independence Ave SW, Washington DC 20250'",
+            "The transcription is missing the MAZON organization information at the top right",
+            "The transcription is missing contact information: '(800) 813-0557' and 'mazon.org'"
+        ],
+        "suggested_fix": "HUNGER IS REAL HUNGER HURTS HUNGER CAN BE STOPPED FUND SNAP! Margurte L. Houston TX\n\nTo: US Dept of Agriculture\n1400 Independence Ave SW\nWashington DC 20250\n\nMAZON 40 YEARS\nA Jewish Response To Hunger\n(800) 813-0557\nmazon.org"
+    },
+    "postcard-089.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The signature 'St. Stcin' appears to be misread - looks more like 'St. Stein' or similar",
+            "The capitalization and exact rendering of the signature is unclear"
+        ],
+        "suggested_fix": "what you do matters. St. Stein"
+    },
+    "postcard-090.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The name appears to be 'Augusta L.' but the last name looks more like 'Houstan' or similar - 'Houston' may be a misreading",
+            "Need to verify if the period after 'L' is present",
+            "The city 'Houston TX' at the end needs verification - it could be part of a signature or location"
+        ],
+        "suggested_fix": "HUNGER IN THE USA IS UNACCEPTABLE SNAP IS THE ANSWER! Augusta L. Houstan TX"
+    },
+    "postcard-091.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'sleep' appears to be 'starve' in the original handwriting - the letters don't match 'sleep'"
+        ],
+        "suggested_fix": "Have a heart and feed the children, so they don't have to starve with an empty belly and an aching stomach."
+    },
+    "postcard-092.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The phrase 'Take care of our kids more in the USA first!!' appears to be 'TAKE CARE OF OUR KIDS HERE IN THE USA FIRST!!' - the word 'HERE' instead of 'more'",
+            "The signature appears to be 'Elaine M.' but could potentially be 'Eloise M.' based on the handwriting style"
+        ],
+        "suggested_fix": "Kids shouldn't have to wonder about where their next meal is coming from... Instead they should be wondering where they should go play at with friends. Take care of our kids here in the USA first!! - Elaine M."
+    },
+    "postcard-093.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The signature appears to read 'Amon Pedrazas' but the handwriting shows 'Amon Pedraza' (without the 's' at the end) or possibly 'Amon Pedrozo' - the last letter is unclear"
+        ],
+        "suggested_fix": "Over 47 million People are Struggling To Feed Themselves and Their Families Protect SNAP Benefits ! Amon Pedraza"
+    },
+    "postcard-094.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'People' appears to be 'PEOPLE' (all caps)",
+            "There appears to be extra exclamation marks that may not match exactly",
+            "The final 'PLEASE' seems to be 'PJEAS' or similar in the image - the handwriting is unclear but doesn't clearly spell 'PLEASE'"
+        ],
+        "suggested_fix": "PLEASE...!! PEOPLE NEED to EAT!! PJEAS"
+    },
+    "postcard-095.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-096.webp": {
+        "status": "ok",
+        "confidence": 10,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-097.webp": {
+        "status": "needs_review",
+        "confidence": 9,
+        "issues": [
+            "The word 'HUNGY' appears to be a misspelling - the image shows 'HUNGRY' with an 'R' that may have been missed"
+        ],
+        "suggested_fix": "NO ONE DESERVES TO GO HUNGRY"
+    },
+    "postcard-098.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'stay' should be 'starve' based on typical phrasing and letter formation",
+            "Missing period after 'Expand SNAP' before the dash"
+        ],
+        "suggested_fix": "How can the \"wealthiest nation on earth\" let its own citizens starve hungry? Use our resources to feed hungry Americans. Expand SNAP. - Anonymous, Colorado"
+    },
+    "postcard-099.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-100.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "First word appears to be 'Secretary' followed by 'Rollins' with a comma, but the handwriting shows 'Secretary Rollins,' - transcription seems correct here",
+            "The quote marks placement may be slightly off - the opening quote appears before 'Have' in the original",
+            "The signature appears to be 'Wendy A.' which matches the transcription"
+        ],
+        "suggested_fix": "Secretary Rollins, \"Have you no decency?\" Starving children is disgraceful & immoral! Wendy A."
+    },
+    "postcard-101.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The signature appears to read 'Calie & Pah' or possibly 'Calie & Pan' followed by what might be 'DR' or 'DA', but the current transcription has 'Cale & Pah DA' which may not be accurate",
+            "The last word or letters after the ampersand are unclear and may be misread"
+        ],
+        "suggested_fix": "Our children in this country should be put first. If you have the power to help these children then DO SOMETHING! Don't let these children go hungry under your watch. Calie & Pah DR"
+    },
+    "postcard-102.webp": {
+        "status": "needs_review",
+        "confidence": 9,
+        "issues": [
+            "The word 'everyones' appears twice but should be 'everyone's' with an apostrophe to be grammatically correct, though the handwriting does not show apostrophes",
+            "Minor: The layout shows this is addressed 'To: USDA' which is not captured in the transcription but may be considered metadata rather than message content"
+        ],
+        "suggested_fix": "Tina P PGH PA There is enough food on this Planet for everyones needs but not for everyones greed Feed the Kids!"
+    },
+    "postcard-103.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'snap' appears to be 'SNAP' (all caps) in the original",
+            "The phrase structure and capitalization should be reviewed - 'benefits.' appears to end with a period, then 'With hope and gratitude,' starts on a new line"
+        ],
+        "suggested_fix": "As an educator, I know first hand that children who don't have their basic needs met aren't available for learning. Our youngest citizens — and all Americans — deserve better. Please protect SNAP benefits.\n\nWith hope and gratitude,\nKate L.\nPittsburgh, PA"
+    },
+    "postcard-104.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'FOOD' appears to be written as 'Food' in lowercase in the original, not all caps",
+            "There appears to be a comma after 'scholars' that should be noted",
+            "The signature location 'Portland ME' might need verification of exact spacing"
+        ],
+        "suggested_fix": "Secretary Rollins — By depriving young scholars Food, you deprive them of an education, of a full, rich life. Do unto others as you would have them do unto you. Julia Portland ME"
+    },
+    "postcard-105.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "Word 'ready' appears to be written as 'ready' but the handwriting looks more like 'already' compressed",
+            "The phrase 'for attention' should likely be 'for your attention' - the 'your' appears to be present but was missed"
+        ],
+        "suggested_fix": "Dear Ms Rollins, Please do not cut programs that provide food to food pantries. I volunteer at a food pantry + see the need in person. We have all already seen a drop in the food we can give the people we serve. Thank you for your attention to this important matter. Sincerely, Nancy Osborn Elkins Park, PA"
+    },
+    "postcard-106.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'Mama' appears to be written as 'Marc' in the third line",
+            "Possible capitalization inconsistencies"
+        ],
+        "suggested_fix": "Mama said \"go out and get the milk\" and I say \"Mama we don't got no cow.\" and Marc says \"No, go to the store and get the milk\" and I say \"Mama we don't got no store!\" Sally Stroudsburg PA"
+    },
+    "postcard-107.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-108.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-109.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-110.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-111.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-112.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The signature appears to be 'Julia, NY' not 'Julie, NY' - the handwriting shows 'Julia'"
+        ],
+        "suggested_fix": "To Secretary Brooke Rollins Protect SNAP Restore Funding Feed People Have compassion! Julia, NY"
+    },
+    "postcard-113.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The signature appears to read 'Tosha Hawkins' not 'Tosha Hawkin' - missing the 's'",
+            "There may be a 'To:' label before the address on the right side that wasn't captured in the main message transcription"
+        ],
+        "suggested_fix": "ATTN: Brooke Rollins Food is a basic human right. There should be zero debates about feeding hungry humans. Period. Tosha Hawkins"
+    },
+    "postcard-114.webp": {
+        "status": "ok",
+        "confidence": 10,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-115.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-116.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The signature appears to read 'Dana Fox' but could also be interpreted differently",
+            "The location looks like 'Minneapolis' but the handwriting makes it somewhat difficult to verify with certainty"
+        ],
+        "suggested_fix": "It's a shame that military families are at risk of hunger! No cuts to SNAP. Dana Fox, Minneapolis"
+    },
+    "postcard-117.webp": {
+        "status": "ok",
+        "confidence": 10,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-118.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "Signature appears to be 'Bill M' not 'Beth M'",
+            "The handwriting shows 'Bill' with a capital B and two l's, not 'Beth'"
+        ],
+        "suggested_fix": "My faith calls me to act for justice. I am calling on my country to do more for our neighbors who face food insecurity. We must be generous and care for those in need. PROTECT SNAP! Bill M Ann Arbor, MI"
+    },
+    "postcard-119.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The name appears to be 'F. James' not 'F. Jamer'",
+            "There are multiple exclamation marks after each 'SNAP' - the transcription shows '!!' but the image shows varying punctuation"
+        ],
+        "suggested_fix": "Keep SNAP!! Keep SNAP!! Keep SNAP!! Keep Food on the tables of low income families!! F. James Madison, AL"
+    },
+    "postcard-120.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "Missing punctuation after 'Marilyn L.' - there appears to be a period",
+            "The signature line appears to be 'Marilyn K.' not 'Marilyn L.'",
+            "Location appears to be 'Madison, AL' which is correct"
+        ],
+        "suggested_fix": "I am writing because we are facing an unacceptable hunger crisis in the United States. Right now, over 49 million people are struggling to feed themselves and their families. This is important to me because my faith calls me to act for justice. SNAP must be protected — anything less is unacceptable. Marilyn K. Madison, AL"
+    },
+    "postcard-121.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The transcription captures the repeated phrase 'SNAP must be funded' six times, but the image shows this phrase written in different colors (red, light blue\/teal, orange, green, olive green, and dark blue). The transcription includes 'S NAP must be funded!' with a space and exclamation mark which doesn't clearly match the original formatting. The signature 'Arielle J Baltimore MD' appears correct."
+        ],
+        "suggested_fix": "SNAP must be funded\nSNAP must be funded\nSNAP must be funded\nSNAP must be funded\nSNAP must be funded\nSNAP must be funded\n\nArielle J Baltimore MD"
+    },
+    "postcard-122.webp": {
+        "status": "ok",
+        "confidence": 10,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-123.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-124.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "'Dont' should be 'Don't' with apostrophe",
+            "'want' appears to be 'Want' with capital W",
+            "'Budy' should be 'Body' - likely transcription error",
+            "'hungrey' should be 'hungry' - spelling as written",
+            "'Sophie' appears correct"
+        ],
+        "suggested_fix": "Please I Don't Want any Body to be hungry Sophie"
+    },
+    "postcard-125.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-126.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-127.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "Missing comma after 'justice' in 'for Tzedek, for justice'",
+            "Missing punctuation: 'and' after 'justice' should be 'And' starting new sentence or have better punctuation",
+            "Signature may be 'Miriam H.' but location looks more like 'Montclair NO' or 'Montclair NJ' - needs verification",
+            "Minor: 'calls to act' should likely be 'calls me to act' based on grammar"
+        ],
+        "suggested_fix": "Dear Secretary Rollins, I am writing because we are facing an unacceptable hunger crisis in the US. Right now, over 47 million people are struggling to feed themselves and their families. This is important to me because my faith calls to act for Tzedek, for justice. And I volunteer at a food pantry and I see the deep need for these programs. Miriam H. Montclair NJ"
+    },
+    "postcard-128.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The name appears to be 'martha L.' not 'Marsha L.' - the handwriting shows a lowercase 't' and 'h' making it 'martha'"
+        ],
+        "suggested_fix": "I am writing because people are struggling to feed their families. Budget cuts will have drastic consequences for people who are hungry and the farmers who feed our nation. martha L. Florham Park, N.J."
+    },
+    "postcard-129.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-130.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'be' appears to say 'be' but might be 'ho' based on context of 'households ho found eligible'",
+            "The phrase 'all households be found eligible' appears awkward - checking original shows 'ho found' not 'be found'"
+        ],
+        "suggested_fix": "Food Stamp\/SNAP grants have been reduced to amounts that do not address need. Grants need to be increased to Clinton-era equivalents to sustain our population. I worked for the Dept of Public Welfare until my retirement, and suggest that all households ho found eligible, with the amount of the grant tied to income, resources and ability to work. Neala Freedman"
+    },
+    "postcard-131.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-132.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-133.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "'Secretary Rollins' appears to be 'Secretary Pollins' based on the handwriting - the letter after 'Poll' looks more like 'ins' than 'Rollins'"
+        ],
+        "suggested_fix": "Dear Secretary Pollins, As a mom, nutrition is crucial for children to have for growth. It is my responsibility, as a mom and Jew, to ensure that all children and family have what they need. Please protect SNAP!!! Sincerely, Sarah Sobel (OH)"
+    },
+    "postcard-134.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-135.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'part' appears to be 'plant' in the original handwriting - the letter formation suggests 'plant' rather than 'part'"
+        ],
+        "suggested_fix": "Roses are fed by the generously shared waters of the sky. Why not be one of those clouds, and contribute to the growth of a beautiful plant of the community? - Jin Litman"
+    },
+    "postcard-136.webp": {
+        "status": "ok",
+        "confidence": 10,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-137.webp": {
+        "status": "ok",
+        "confidence": 10,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-138.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-139.webp": {
+        "status": "needs_review",
+        "confidence": 9,
+        "issues": [
+            "The word 'KITTEN' should be 'KITTEN,' (with comma)",
+            "The word 'we' should be capitalized as 'We'",
+            "Missing exclamation mark after 'SNAP' - should be 'SNAP!'",
+            "Location appears to be 'Mooresville NC' but handwriting is unclear - could verify"
+        ],
+        "suggested_fix": "We're not KITTEN around! We want you to preserve SNAP! Francine F. Mooresville NC"
+    },
+    "postcard-140.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-141.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-142.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-143.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "First name appears to be 'Brooke' not 'Brooke' - actually looks correct",
+            "Last name appears to be 'Rollins' but handwriting shows 'Rollins' - this is correct",
+            "Word 'its' should be 'it's' for grammatical correctness but transcription matches what's written",
+            "Word 'household' appears to have a comma after it in the image",
+            "Signature appears to be 'Cierra' but the handwriting is difficult to read - could potentially be another name"
+        ],
+        "suggested_fix": "To Brooke Rollins, The thought of having SNAP benefits cut is not only incredibly sad but its unethical. Families like mine, a single parent household, rely on these benefits to feed our children. You have an opportunity to do the right thing and continue your duty of servicing the publics need. I hope you make the right choice. - Cierra, former SNAP recipient"
+    },
+    "postcard-144.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-145.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-146.webp": {
+        "status": "needs_review",
+        "confidence": 9,
+        "issues": [
+            "The sender's name appears to be 'Jennifer D.' but may be a different first name - the handwriting shows what looks like 'Jennifer' but could potentially be read as another name starting with 'J'",
+            "The word 'Americas' should be 'Americans' - there appears to be an 'n' visible in the handwriting"
+        ],
+        "suggested_fix": "Secretary Brooke Rollins, With great power comes great responsibility. Please do not cut programs that feed millions of Americans every day. Please use your power to protect our nation's most vulnerable. — Jennifer D. Charleston, SC"
+    },
+    "postcard-147.webp": {
+        "status": "needs_review",
+        "confidence": 9,
+        "issues": [
+            "'RAIN' should be 'RAIN' - actually on closer inspection this appears correct but the metaphor is unclear",
+            "Missing 'To:' field content - the postcard shows it's addressed to 'Secretary Brooke Rollins USDA'",
+            "The transcription doesn't capture the header\/recipient information visible in the image"
+        ],
+        "suggested_fix": "SNAP is RAIN in food Deserts. Without SNAP, many rural grocery stores would not be able to stay open, leaving whole communities in food deserts. MB - Chas. SC\n\nTo: Secretary Brooke Rollins USDA"
+    },
+    "postcard-148.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The symbol '&' in transcription appears to be written as '&' in the image, which is correct",
+            "The name at the end appears to be 'MelanieJ' or 'Melanie J' - the transcription has 'Melenie J' which may be a misspelling, though handwriting makes it difficult to confirm the exact spelling"
+        ],
+        "suggested_fix": "The average SNAP recipient receives $6 per day. & most are employed. SNAP is necessary when companies are allowed to pay workers less than a living wage. Punish the companies taking advantage - not the hard working people. Melanie J - Charleston, SC"
+    },
+    "postcard-149.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-150.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "Last name appears to be 'Summerville' not 'Summenille'",
+            "Minor spelling: 'devasting' should likely be 'devastating' (though this matches the handwriting)"
+        ],
+        "suggested_fix": "Dear Secretary Rollins, I am writing because I grew up hungry. My single mother and disabled grandmother worked hard to care for 4 children. SNAP was the only thing between us and extreme poverty. Please don't take away this vital and necessary program that helps so many hardworking families and innocent children. I work for a food bank now to give back and see the devastating effects of hunger. The data is clear that SNAP is the most effective anti-poverty tool. Please do the right thing. Pleading, Misty B. Summerville, South Carolina"
+    },
+    "postcard-151.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-152.webp": {
+        "status": "needs_review",
+        "confidence": 9,
+        "issues": [
+            "The word 'negociable' appears to be misspelled - should be 'negotiable'"
+        ],
+        "suggested_fix": "No one deserves to go hungry! To have food is not negotiable! Maria B. Madison, WI"
+    },
+    "postcard-153.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-154.webp": {
+        "status": "needs_review",
+        "confidence": 9,
+        "issues": [
+            "'hungar' should be 'hunger'"
+        ],
+        "suggested_fix": "Most of the people facing hunger in the U.S. are children, seniors, or people with disabilities. They are often our most vulnerable neighbors — those least able to absorb cuts to federal food assistance programs. It's not just numbers. It's people. — McKenna M."
+    },
+    "postcard-155.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-156.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'die' appears to be 'die' in the image, but given the handwriting style, it could potentially be read differently",
+            "The name signature appears to be 'Roxy Roads' but the handwriting is stylized and could potentially be read as 'Roxy Reads' - the last word looks like it could end in 's' or have a different ending"
+        ],
+        "suggested_fix": "Food is a human right— everyone deserves access to affordable, healthy, clean food. No one should die of hunger. We can fix this problem. Thank you, Roxy Reads"
+    },
+    "postcard-157.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The signature appears to read 'Norman K' but looking more carefully at the handwriting, it could be a different name - the first letter looks more like 'N' but the full name is unclear and may not be 'Norman'"
+        ],
+        "suggested_fix": "No one should go hungry in the richest country in the world to benefit the rich. Do not cut SNAP benefits to the needy. Get a conscience! [Signature unclear - appears to be a name starting with N] Phoenix, AZ"
+    },
+    "postcard-158.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-159.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The last name appears to be 'Ryder' or similar, not 'Ry[nolds?]'",
+            "The word 'SNAP' appears multiple times scattered across the star shape, which is captured, but the exact count and positioning could be verified",
+            "There appears to be additional text 'SNAP' instances that may need verification"
+        ],
+        "suggested_fix": "SNAP SNAP SNAP SNAP SNAP SNAP SNAP SNAP snap benefits for seniors MATTERS Theresa Ryder"
+    },
+    "postcard-160.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-161.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-162.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-163.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'gatta' appears to be misread - should be 'gotta'"
+        ],
+        "suggested_fix": "OH SNAP! You gotta feed people!! Liz X."
+    },
+    "postcard-164.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'more' appears as 'HERE' in the original - text reads 'KIDS HERE IN THE USA FIRST!!'",
+            "Signature appears to be 'Elaine M.' which matches, but the handwriting for the main message needs verification"
+        ],
+        "suggested_fix": "Kids shouldn't have to wonder about where their next meal is coming from... Instead they should be wondering where they should go play at with friends. Take care of our kids here in the USA first!! - Elaine M."
+    },
+    "postcard-165.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-166.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The amount '$6' appears to be written as '$6' but context suggests it should be checked",
+            "The word 'was' before 'getting' needs verification - handwriting is unclear",
+            "Need to verify if there's punctuation or emphasis that was missed"
+        ],
+        "suggested_fix": "I get $946 a month in Social Security. My rent is $840 - I have only $6 left after I pay bills. I was getting $186 in food stamps. I run out of food every month. Betty R age 76"
+    },
+    "postcard-167.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "First word appears to be 'Brooki' but looks more like 'Brooklyn' or similar",
+            "Last phrase 'Tcry Ro' appears incomplete - should likely be a name like 'Tracy Ro' or similar",
+            "The transcription seems to miss or misread the complete signature at the bottom"
+        ],
+        "suggested_fix": "Brooklyn Do right by your constituents + approve food benefits Tracy Ro"
+    },
+    "postcard-168.webp": {
+        "status": "needs_review",
+        "confidence": 9,
+        "issues": [
+            "'acess' is misspelled - should be 'access'"
+        ],
+        "suggested_fix": "Everyone Should have access to nutritious food ♥"
+    },
+    "postcard-169.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The word 'Rjes' appears to be misread - looking at the handwriting it appears to say 'Rajes' or possibly 'Raises'",
+            "The word 'Doc' may be 'Do' based on the context and handwriting style"
+        ],
+        "suggested_fix": "Food is a basic need Do the Right thing Do Raises"
+    },
+    "postcard-170.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "'Lets' should be 'Let's' with apostrophe",
+            "'eachother' should be 'each other' as two words",
+            "'johnaees' appears to be misread - looks more like 'Jo Maees' or 'Jomaees'",
+            "The heart symbol '♥' is not clearly visible in the handwriting",
+            "Missing capitalization on 'Security' appears correct but 'Lets' should have proper punctuation"
+        ],
+        "suggested_fix": "Everyone needs food Security. Let's be there for each other Jo Maees Wilson"
+    },
+    "postcard-171.webp": {
+        "status": "ok",
+        "confidence": 9,
+        "issues": [],
+        "suggested_fix": ""
+    },
+    "postcard-172.webp": {
+        "status": "needs_review",
+        "confidence": 8,
+        "issues": [
+            "The signature appears to be 'Madyn ♡ alex lex' or similar, not 'aleylexi' - there seem to be two names with a heart symbol between them"
+        ],
+        "suggested_fix": "Brooke, please don't let people starve. Support food benefits. Madyn ♡ alex lex"
+    }
+}

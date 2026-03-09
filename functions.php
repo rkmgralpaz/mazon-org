@@ -1582,4 +1582,96 @@ function start_webp_conversion($params){
 
 
 
+//-------------------------------//
+//--- POSTCARDS REVIEW ADMIN ---//
+//-------------------------------//
+
+require_once get_template_directory() . '/admin/postcards-review.php';
+
+add_action('admin_menu', function() {
+    add_menu_page(
+        'Postcards Review',
+        'Postcards Review',
+        'manage_options',
+        'postcards-review',
+        'render_postcards_review',
+        'dashicons-images-alt2',
+        80
+    );
+});
+
+add_action('wp_ajax_save_postcard_alt', 'save_postcard_alt_handler');
+function save_postcard_alt_handler() {
+    // Verify nonce and permissions
+    if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'postcards_review_nonce')) {
+        wp_send_json_error('Invalid nonce');
+    }
+    if (!current_user_can('manage_options')) {
+        wp_send_json_error('Insufficient permissions');
+    }
+
+    $filename = isset($_POST['filename']) ? sanitize_file_name($_POST['filename']) : '';
+    $text = isset($_POST['text']) ? wp_unslash($_POST['text']) : '';
+
+    if (empty($filename)) {
+        wp_send_json_error('Empty filename');
+    }
+
+    $postcards_dir = get_template_directory() . '/postcards-wall';
+    $alts_file = $postcards_dir . '/postcards-alts.json';
+    $js_file = $postcards_dir . '/postcards-alts-data.js';
+
+    // Read current JSON
+    if (!file_exists($alts_file)) {
+        wp_send_json_error('File postcards-alts.json not found');
+    }
+
+    $alts = json_decode(file_get_contents($alts_file), true);
+    if ($alts === null) {
+        wp_send_json_error('JSON parse error');
+    }
+
+    if (!array_key_exists($filename, $alts)) {
+        wp_send_json_error('Postcard not found: ' . $filename);
+    }
+
+    // Update
+    $alts[$filename] = $text;
+
+    // Save JSON
+    $json_result = file_put_contents(
+        $alts_file,
+        json_encode($alts, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
+    );
+    if ($json_result === false) {
+        wp_send_json_error('Error writing postcards-alts.json');
+    }
+
+    // Regenerate JS for the live app
+    $js_content = "// Auto-generated — DO NOT EDIT MANUALLY\n";
+    $js_content .= "var POSTCARD_ALTS = " . json_encode($alts, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE) . ";\n";
+
+    $js_result = file_put_contents($js_file, $js_content);
+    if ($js_result === false) {
+        wp_send_json_error('JSON saved but error writing postcards-alts-data.js');
+    }
+
+    // Mark as "ok" in verification-report.json
+    $report_file = $postcards_dir . '/verification-report.json';
+    if (file_exists($report_file)) {
+        $report = json_decode(file_get_contents($report_file), true);
+        if ($report && isset($report[$filename]) && $report[$filename]['status'] === 'needs_review') {
+            $report[$filename]['status'] = 'ok';
+            $report[$filename]['issues'] = [];
+            $report[$filename]['suggested_fix'] = '';
+            file_put_contents(
+                $report_file,
+                json_encode($report, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
+            );
+        }
+    }
+
+    wp_send_json_success('Saved successfully');
+}
+
 ?>

@@ -101,7 +101,7 @@ var FRONT_LQIPS = FRONTS.map(function (f) {
 ------------------------------------------------------------------ */
 var POSTCARDS = (function () {
     var list = [];
-    for (var i = 1; i <= 100; i++) {
+    for (var i = 1; i <= 172; i++) {
         var n = String(i).padStart(3, '0');
         var frontIdx = Math.floor(Math.random() * FRONTS.length);
         list.push({

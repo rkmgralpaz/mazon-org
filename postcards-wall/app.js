@@ -32,8 +32,7 @@ var MAX_SCALE = 2.0;            // Zoom máximo permitido en el muro.
 // ==========================
 // WALL — DISTRIBUCIÓN FRONT/BACK
 // ==========================
-var FRONTS_PER_BLOCK = 4;       // Cantidad de cards mostrando FRONT por cada bloque
-var BLOCK_SIZE = 24;            // Tamaño del bloque de distribución
+var FRONT_RATIO = 1 / 10;      // Proporción de cards mostrando FRONT (~17 de 172)
 
 // ==========================
 // WALL — CARGA PROGRESIVA (LQIP)
@@ -68,22 +67,20 @@ var CLOSE_ANIMATION = 'fly-back'; // 'fly-back' | 'none'
 
 /* ------------------------------------------------------------------
    FRONT IMAGES
-   Randomly assigned to postcards. May repeat.
+   Ordered sequence — assigned cyclically to front-facing cards.
 ------------------------------------------------------------------ */
 var FRONTS = [
-    'postcards/Front/front-01.webp',
-    'postcards/Front/front-02.webp',
-    'postcards/Front/front-03.webp',
-    'postcards/Front/front-04.webp',
-    'postcards/Front/front-05.webp',
-    'postcards/Front/front-english.webp',
-    'postcards/Front/front-hebrew.webp',
-    'postcards/Front/front-outline.webp',
-    'postcards/Front/front-pride-1.webp',
-    'postcards/Front/front-pride-2.webp',
-    'postcards/Front/front-spanish.webp',
-    'postcards/Front/front-trans-1.webp',
-    'postcards/Front/front-trans-2.webp',
+    'postcards/Front/1-front-english.webp',
+    'postcards/Front/2-front-03.webp',
+    'postcards/Front/3-front-pride-1.webp',
+    'postcards/Front/4-front-trans-2.webp',
+    'postcards/Front/5-front-04.webp',
+    'postcards/Front/6-front-pride-2.webp',
+    'postcards/Front/7-front-trans-1.webp',
+    'postcards/Front/8-front-outline.webp',
+    'postcards/Front/9-front-hebrew.webp',
+    'postcards/Front/10-front-05.webp',
+    'postcards/Front/11-front-spanish.webp',
 ];
 
 var FRONT_THUMBS = FRONTS.map(function (f) {
@@ -103,15 +100,14 @@ var POSTCARDS = (function () {
     var list = [];
     for (var i = 1; i <= 172; i++) {
         var n = String(i).padStart(3, '0');
-        var frontIdx = Math.floor(Math.random() * FRONTS.length);
         list.push({
             slug: 'postcard-' + n,
             file: 'postcards/Selects/postcard-' + n + '.webp',
             thumbFile: 'postcards/Selects/thumbs/postcard-' + n + '.webp',
             lqipFile: 'postcards/Selects/lqip/postcard-' + n + '.webp',
-            frontFile: FRONTS[frontIdx],
-            frontThumb: FRONT_THUMBS[frontIdx],
-            frontLqip: FRONT_LQIPS[frontIdx],
+            frontFile: '',
+            frontThumb: '',
+            frontLqip: '',
             face: 'back',
         });
     }
@@ -119,21 +115,80 @@ var POSTCARDS = (function () {
 })();
 
 /* ------------------------------------------------------------------
-   FRONT/BACK DISTRIBUTION
-   For every block of BLOCK_SIZE cards, pick FRONTS_PER_BLOCK
-   random positions to show as front. Uses Fisher-Yates shuffle.
+   FRONT/BACK DISTRIBUTION — Poisson Disk Sampling
+   Distribuye fronts en el grid 2D con separación uniforme orgánica.
+   Usa seeded PRNG para layout reproducible.
 ------------------------------------------------------------------ */
 (function distributeFronts() {
-    for (var b = 0; b < POSTCARDS.length; b += BLOCK_SIZE) {
-        var blockLen = Math.min(BLOCK_SIZE, POSTCARDS.length - b);
-        var indices = [];
-        for (var j = 0; j < blockLen; j++) indices.push(j);
-        for (var k = indices.length - 1; k > 0; k--) {
-            var r = Math.floor(Math.random() * (k + 1));
-            var tmp = indices[k]; indices[k] = indices[r]; indices[r] = tmp;
+    var cols = 8; // debe coincidir con LAYOUT.cols
+    var total = POSTCARDS.length;
+    var rows = Math.ceil(total / cols);
+    var targetCount = Math.round(total * FRONT_RATIO);
+
+    /* Seeded PRNG */
+    var seed = 7;
+    function srand() {
+        seed = (seed * 9301 + 49297) % 233280;
+        return seed / 233280;
+    }
+
+    /* Poisson disk: radio mínimo entre puntos */
+    var minR = Math.sqrt((rows * cols) / targetCount) * 0.85;
+    var placed = [{ col: 1, row: 1 }]; // seed desde esquina superior
+    var active = [0];
+    var maxAttempts = 30;
+
+    while (active.length > 0 && placed.length < targetCount) {
+        var ai = Math.floor(srand() * active.length);
+        var pt = placed[active[ai]];
+        var found = false;
+        for (var a = 0; a < maxAttempts; a++) {
+            var angle = srand() * Math.PI * 2;
+            var dist = minR + srand() * minR;
+            var nr = Math.round(pt.row + Math.sin(angle) * dist);
+            var nc = Math.round(pt.col + Math.cos(angle) * dist);
+            if (nr < 0 || nr >= rows || nc < 0 || nc >= cols) continue;
+            if (nr * cols + nc >= total) continue;
+            var ok = true;
+            for (var p = 0; p < placed.length; p++) {
+                var dc = nc - placed[p].col, dr = nr - placed[p].row;
+                if (Math.sqrt(dc * dc + dr * dr) < minR) { ok = false; break; }
+            }
+            if (ok) {
+                placed.push({ col: nc, row: nr });
+                active.push(placed.length - 1);
+                found = true;
+                break;
+            }
         }
-        for (var f = 0; f < Math.min(FRONTS_PER_BLOCK, blockLen); f++) {
-            POSTCARDS[b + indices[f]].face = 'front';
+        if (!found) active.splice(ai, 1);
+    }
+
+    /* Marcar cards como front */
+    for (var i = 0; i < placed.length; i++) {
+        var idx = placed[i].row * cols + placed[i].col;
+        POSTCARDS[idx].face = 'front';
+    }
+
+    /* Asignar imágenes front en orden secuencial (cíclico) a las que muestran front */
+    var frontSeq = 0;
+    for (var j = 0; j < total; j++) {
+        if (POSTCARDS[j].face === 'front') {
+            var fi = frontSeq % FRONTS.length;
+            POSTCARDS[j].frontFile = FRONTS[fi];
+            POSTCARDS[j].frontThumb = FRONT_THUMBS[fi];
+            POSTCARDS[j].frontLqip = FRONT_LQIPS[fi];
+            frontSeq++;
+        }
+    }
+
+    /* Cards back también necesitan un front asignado (para flip en slider) */
+    for (var k = 0; k < total; k++) {
+        if (POSTCARDS[k].face === 'back') {
+            var ri = Math.floor(srand() * FRONTS.length);
+            POSTCARDS[k].frontFile = FRONTS[ri];
+            POSTCARDS[k].frontThumb = FRONT_THUMBS[ri];
+            POSTCARDS[k].frontLqip = FRONT_LQIPS[ri];
         }
     }
 })();
@@ -626,11 +681,13 @@ function initPanZoom() {
 
     /* ---- Touch support ---- */
     var lastTouchDist = null;
+    var lastTouchMidX = 0, lastTouchMidY = 0;
     var touchStartX = 0, touchStartY = 0;
     var touchOriginX = 0, touchOriginY = 0;
     var touchVelSamples = [];
     var touchPointerMoved = false;
     var touchPendingTarget = null;
+    var wasPinching = false;
 
     dom.wallContainer.addEventListener('touchstart', function (e) {
         if (e.target.closest('.zoom-controls')) return;
@@ -645,11 +702,16 @@ function initPanZoom() {
             touchVelSamples = [];
             velX = 0; velY = 0;
             touchPointerMoved = false;
+            wasPinching = false;
             touchPendingTarget = e.target.closest('.postcard-item');
         }
         if (e.touches.length === 2) {
             lastTouchDist = getTouchDist(e.touches);
+            lastTouchMidX = (e.touches[0].clientX + e.touches[1].clientX) / 2 - containerRect.left;
+            lastTouchMidY = (e.touches[0].clientY + e.touches[1].clientY) / 2 - containerRect.top;
             touchPendingTarget = null;
+            wasPinching = true;
+            touchVelSamples = [];
         }
     }, { passive: false });
 
@@ -657,6 +719,9 @@ function initPanZoom() {
         if (e.target.closest('.zoom-controls')) return;
         e.preventDefault();
         if (e.touches.length === 1) {
+            /* Ignore 1-finger moves right after a pinch (finger still lifting) */
+            if (wasPinching) return;
+
             var tdx = e.touches[0].clientX - touchStartX;
             var tdy = e.touches[0].clientY - touchStartY;
 
@@ -678,14 +743,15 @@ function initPanZoom() {
         }
         if (e.touches.length === 2) {
             var dist = getTouchDist(e.touches);
+            var midX = ((e.touches[0].clientX + e.touches[1].clientX) / 2) - containerRect.left;
+            var midY = ((e.touches[0].clientY + e.touches[1].clientY) / 2) - containerRect.top;
             if (lastTouchDist) {
-                var midX = ((e.touches[0].clientX + e.touches[1].clientX) / 2) - containerRect.left;
-                var midY = ((e.touches[0].clientY + e.touches[1].clientY) / 2) - containerRect.top;
                 var ratio = dist / lastTouchDist;
                 var newS = Math.min(MAX_SCALE, Math.max(MIN_SCALE, targetScale * ratio));
                 var scaleRatio = newS / targetScale;
-                var newX = midX - scaleRatio * (midX - targetX);
-                var newY = midY - scaleRatio * (midY - targetY);
+                /* Use previous midpoint so finger movement also pans */
+                var newX = midX - scaleRatio * (lastTouchMidX - targetX);
+                var newY = midY - scaleRatio * (lastTouchMidY - targetY);
                 var clamped2 = clampPan(newX, newY, newS);
                 targetX = clamped2.x;
                 targetY = clamped2.y;
@@ -693,10 +759,22 @@ function initPanZoom() {
                 scheduleFrame();
             }
             lastTouchDist = dist;
+            lastTouchMidX = midX;
+            lastTouchMidY = midY;
         }
     }, { passive: false });
 
     dom.wallContainer.addEventListener('touchend', function (e) {
+        /* Pinch → pan transition: reset pan origin to remaining finger */
+        if (e.touches.length === 1) {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            touchOriginX = targetX;
+            touchOriginY = targetY;
+            touchVelSamples = [];
+            touchPointerMoved = true;
+            /* wasPinching stays true so momentum is skipped on final lift */
+        }
         if (e.touches.length === 0 && !touchPointerMoved && touchPendingTarget) {
             var idx = parseInt(touchPendingTarget.dataset.index, 10);
             if (!isNaN(idx)) openSlide(idx, touchPendingTarget);
@@ -705,8 +783,9 @@ function initPanZoom() {
         touchPointerMoved = false;
         lastTouchDist = null;
 
+        /* Skip momentum entirely after a pinch gesture */
         velX = 0; velY = 0;
-        if (touchVelSamples.length >= 2) {
+        if (!wasPinching && touchVelSamples.length >= 2) {
             var oldest = touchVelSamples[0];
             var newest = touchVelSamples[touchVelSamples.length - 1];
             var elapsed = newest.t - oldest.t;
@@ -716,6 +795,7 @@ function initPanZoom() {
             }
         }
         touchVelSamples = [];
+        wasPinching = false;
 
         if (Math.abs(velX) > MOMENTUM_MIN || Math.abs(velY) > MOMENTUM_MIN) {
             momentumActive = true;

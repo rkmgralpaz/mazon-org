@@ -28,3 +28,10 @@ yarn-error.log*
 # Build outputs (si aplicable)
 dist/
 build/
+
+# Archivos comprimidos
+*.zip
+
+# Versiones anteriores de imágenes
+*-Old.webp
+*-darker.webp

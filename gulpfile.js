@@ -10,10 +10,9 @@ var reload         = browserSync.reload;
 
 exports.serve = () => {
   browserSync.init({
-    proxy: 'http://localhost:10044/',
-    host : '192.168.100.96', //CURRENT IP
+    proxy: 'http://localhost10044/',
+    host : '192.168.100.96', 
     open: false,
-    // ghostMode: false,
     notify: false
   })
   gulp.watch('./sass/framework/*.scss', buildStyles)

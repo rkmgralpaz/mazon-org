@@ -45,17 +45,15 @@ Version: 1.0
 @import 'main/policy-actions.scss';
 @import 'main/postcards-intro';
 
-.twitter-tweet.twitter-tweet-rendered {
-    iframe {
+.twitter-tweet.twitter-tweet-rendered{
+    iframe{
         width: 100% !important;
     }
 }
-
-.iframe-video {
+.iframe-video{
     position: relative;
     padding-top: 56.25%;
-
-    iframe {
+    iframe{
         position: absolute;
         top: 0px;
         left: 0px;
@@ -63,7 +61,6 @@ Version: 1.0
         height: 100% !important;
     }
 }
-
-iframe.video {
+iframe.video{
     width: 100% !important;
 }

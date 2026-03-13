@@ -93,27 +93,34 @@ body.remove-scroll {
             }
 
             .logo {
-                transform: translateY(-8px);
-                height: 52px;
-                display: none;
+                transform: translateY(-20px);
 
-                @media only screen and (min-width: $breakpoint-ipad-portrait ) {
-                    display: block
+                @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+                    display: none;
                 }
             }
 
             .logo-mobile {
-                transform: translateY(-5px);
-                width: auto;
-                height: 40px;
-                display: block;
+                transform: translateY(-15px);
+                display: none;
 
-                @media only screen and (min-width: $breakpoint-ipad-portrait) {
-                    display: none;
+                @media only screen and (max-width: $breakpoint-ipad-portrait - 1px) {
+                    display: block;
                 }
 
+                @media only screen and (max-width: $breakpoint-iphone-portrait - 1px) {
+                    display: none;
+                }
             }
 
+            .logo-mobile-small {
+                transform: translateY(-15px);
+                display: none;
+
+                @media only screen and (max-width: $breakpoint-iphone-portrait - 1px) {
+                    display: block;
+                }
+            }
         }
     }
 

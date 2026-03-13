@@ -68,7 +68,7 @@ $intro_base_url = get_template_directory_uri() . '/assets/postcards/intro/';
     imgs[0].src = base + 'intro-front-01.webp';
     imgs[1].src = base + 'intro-back-05.webp';
     imgs[2].src = base + 'intro-back-06.webp'; 
-    imgs[3].src = base + 'intro-front-05.webp'; // 
+    imgs[3].src = base + 'intro-front-english.webp';
     var header = document.getElementById('header');
     if (header) {
       document.documentElement.style.setProperty(
